@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Daraz_V_Convert.BL;
 
 namespace Daraz_V_Convert
 {
@@ -17,22 +18,17 @@ namespace Daraz_V_Convert
         static void Main(string[] args)
         {
             int num_seller = 0;
-            string[] seller_name = new string[SELLER_COUNT];
-            string[] seller_phone_num = new string[SELLER_COUNT];
-            string[] seller_buisness = new string[SELLER_COUNT];
-            string[] seller_password = new string[SELLER_COUNT];
-
             int num_products = 0;
-            string[] products = new string[PRODUCT_COUNT];
-            int[] prices = new int[PRODUCT_COUNT];
 
             int num_cust = 0, num_product1 = 0;
-            string[] user_nameA = new string[CUST_COUNT];
-            string[] user_passwordA = new string[CUST_COUNT];
             string[] buy_productA = new string[BUY_COUNT];
             int[] buy_product_price = new int[BUY_COUNT];
 
-            load_data(ref num_seller, seller_name, seller_phone_num, seller_buisness, seller_password,ref num_products, products, prices,ref num_cust, user_nameA, user_passwordA);
+            Seller[] seller = new Seller[SELLER_COUNT];
+            Product[] products=new Product[PRODUCT_COUNT];
+            User[] user=new User[CUST_COUNT];
+
+            //load_data(ref num_seller, seller_name, seller_phone_num, seller_buisness, seller_password,ref num_products, products, prices,ref num_cust, user_nameA, user_passwordA);
 
             char main_menu_option = '5';
             string admin_pass = "1234";
@@ -60,16 +56,16 @@ namespace Daraz_V_Convert
                             header();
                             if (admin_option == '1')
                             {
-                                add_seller(ref num_seller, seller_name, seller_phone_num, seller_buisness, seller_password);
+                                add_seller(ref num_seller,seller);
                             }
                             else if (admin_option == '2')
                             {
                                 Console.WriteLine("Admin Menu > View Seller >");
                                 Console.WriteLine("");
-                                if (check_seller(num_seller,seller_phone_num))
+                                if (check_seller(num_seller,seller))
                                 {
                                     Console.WriteLine("Name\tNumber\tBuisness\tPassword");
-                                    show_seller_data(num_seller, seller_name, seller_phone_num, seller_buisness, seller_password);
+                                    show_seller_data(num_seller,seller);
                                 }
                                 else
                                 {
@@ -85,9 +81,9 @@ namespace Daraz_V_Convert
                                 Console.WriteLine("Ali Just bought Two bags . ");
                                 for (int i = 0; i < num_seller; i++)
                                 {
-                                    if (seller_phone_num[i] != "")
+                                    if (seller[i].phone_num != "")
                                     {
-                                        Console.WriteLine("You just added " + seller_name[i] + " to " + seller_buisness[i] + " Buisness list .");
+                                        Console.WriteLine("You just added " + seller[i].name + " to " + seller[i].buisness + " Buisness list .");
                                     }
                                 }
                                 Console.WriteLine("");
@@ -106,7 +102,7 @@ namespace Daraz_V_Convert
                                     delete_seller = Console.ReadLine();
                                     for (int i = 0; i < num_seller; i++)
                                     {
-                                        if (delete_seller == seller_name[i])
+                                        if (delete_seller == seller[i].name)
                                         {
                                             index = i;
                                             break;
@@ -114,11 +110,11 @@ namespace Daraz_V_Convert
                                     }
                                     if (index != -1)
                                     {
-                                        Console.WriteLine(seller_name[index] + " has been deleted from " + seller_buisness[index] + " List .");
-                                        seller_name[index] = "";
-                                        seller_phone_num[index] = "";
-                                        seller_buisness[index] = "";
-                                        seller_password[index] = "";
+                                        Console.WriteLine(seller[index].name + " has been deleted from " + seller[index].buisness + " List .");
+                                        seller[index].name = "";
+                                        seller[index].phone_num = "";
+                                        seller[index].buisness = "";
+                                        seller[index].password = "";
                                     }
                                     else
                                     {
@@ -185,7 +181,8 @@ namespace Daraz_V_Convert
                         buis = Console.ReadLine();
                         Console.Write("Enter Seller Password : ");
                         pass1 = Console.ReadLine();
-                        add_seller_to_array(name1, phone, buis, pass1,ref num_seller,seller_name, seller_phone_num, seller_buisness, seller_password);
+                        seller[num_seller]= add_seller_to_array(name1, phone, buis, pass1);
+                        num_seller++;
                         Console.WriteLine("Seller id has been created");
                         Console.WriteLine("");
                         exit = '2';
@@ -201,7 +198,7 @@ namespace Daraz_V_Convert
                         passs = Console.ReadLine();
                         for (int i = 0; i < num_seller; i++)
                         {
-                            if (passs == seller_password[i] && name == seller_name[i])
+                            if (passs == seller[i].name && name == seller[i].password)
                             {
                                 index = i;
                             }
@@ -209,7 +206,7 @@ namespace Daraz_V_Convert
                         if (index != -1)
                         {
                             Console.WriteLine("");
-                            Console.WriteLine("Hello " + seller_name[index] + " .");
+                            Console.WriteLine("Hello " + seller[index].name + " .");
                             Console.WriteLine("Hope you are fine .");
                             Console.WriteLine("Lets get back to work .");
                             Console.WriteLine("");
@@ -221,31 +218,31 @@ namespace Daraz_V_Convert
                                 header();
                                 if (seller_option == '1')
                                 {
-                                    add_product(ref num_products, products, prices);
+                                    add_product(ref num_products,products);
                                 }
                                 else if (seller_option == '2')
                                 {
                                     Console.WriteLine("Seller Menu > View Products >");
-                                    show_products(num_products, products, prices);
+                                    show_products(num_products, products);
                                 }
                                 else if (seller_option == '3')
                                 {
                                     Console.WriteLine("Seller Menu > Sorted Products >");
-                                    sorting(num_products, products, prices);
+                                    sorting(num_products, products);
                                 }
                                 else if (seller_option == '4')
                                 {
-                                    delete_products(seller_password[index], num_products, products, prices);
+                                    delete_products(seller[index].password, num_products, products);
                                 }
                                 else if (seller_option == '5')
                                 {
-                                    update_seller(num_products, products, prices);
+                                    update_seller(num_products, products);
                                 }
                                 else if (seller_option == '6')
                                 {
                                     Console.WriteLine("Seller Menu > Update Password >");
                                     Console.WriteLine("");
-                                    seller_password[index] = update_password(seller_password[index]);
+                                    seller[index].password = update_password(seller[index].password);
                                 }
                                 else if (seller_option == '7')
                                 {
@@ -290,7 +287,7 @@ namespace Daraz_V_Convert
                             header();
                             Console.WriteLine("Customer > Create New Account >");
                             Console.WriteLine("");
-                            create_account_customer(ref num_cust, user_nameA, user_passwordA);
+                            create_account_customer(ref num_cust, user);
                             clear_screen();
                         }
                         else if (exit == '2')
@@ -305,7 +302,7 @@ namespace Daraz_V_Convert
                             user_password = Console.ReadLine();
                             for (int i = 0; i < num_cust; i++)
                             {
-                                if (user_name == user_nameA[i] && user_password == user_passwordA[i])
+                                if (user_name == user[i].name && user_password == user[i].password)
                                 {
                                     index = i;
                                 }
@@ -321,13 +318,13 @@ namespace Daraz_V_Convert
                                     {
                                         Console.WriteLine("Customer Menu > View Products >");
                                         Console.WriteLine("");
-                                        show_product_cust(num_products, products, prices,ref num_product1,buy_productA,buy_product_price);
+                                        show_product_cust(num_products, products,ref num_product1,buy_productA,buy_product_price);
                                     }
                                     else if (customer_option == '2')
                                     {
                                         Console.WriteLine("Customer Menu > View Cart >");
                                         Console.WriteLine("");
-                                        bool yt = check_product(num_products,prices);
+                                        bool yt = check_product(num_products,products);
                                         if (yt)
                                         {
                                             Console.WriteLine("Products\tPrices");
@@ -403,7 +400,7 @@ namespace Daraz_V_Convert
                                     {
                                         Console.WriteLine("Customer_Menu > Update Password >");
                                         Console.WriteLine("");
-                                        user_passwordA[index] = update_password(user_passwordA[index]);
+                                        user[index].password = update_password(user[index].password);
                                     }
                                     else if (customer_option == '5')
                                     {
@@ -439,7 +436,7 @@ namespace Daraz_V_Convert
                     Console.WriteLine("Thanks for using our Program..");
                     Console.WriteLine("We are happy to serve you");
                     clear_screen();
-                    store_data(num_seller, seller_name, seller_phone_num, seller_buisness, seller_password, products, prices, user_nameA, user_passwordA);
+                    //store_data(num_seller, seller_name, seller_phone_num, seller_buisness, seller_password, products, user_nameA, user_passwordA);
                 }
                 else
                 {
@@ -567,15 +564,16 @@ namespace Daraz_V_Convert
             op = Console.ReadLine()[0];
             return op;
         }
-        static void add_seller_to_array(string name, string ph, string buisness, string pass,ref int num_seller, string[] seller_name, string[] seller_phone_num, string[] seller_buisness, string[] seller_password)
+        static Seller add_seller_to_array(string name, string ph, string buisness, string pass)
         {
-            seller_name[num_seller] = name;
-            seller_phone_num[num_seller] = ph;
-            seller_buisness[num_seller] = buisness;
-            seller_password[num_seller] = pass;
-            num_seller++;
+            Seller seller = new Seller();
+            seller.name = name;
+            seller.phone_num = ph;
+            seller.buisness = buisness;
+            seller.password= pass;
+            return seller;
         }
-        static void add_seller(ref int num_seller,string[] seller_name, string[] seller_phone_num, string[] seller_buisness, string[] seller_password)
+        static void add_seller(ref int num_seller,Seller[] seller)
         {
             for (int i = num_seller; i < SELLER_COUNT; i++)
             {
@@ -592,7 +590,8 @@ namespace Daraz_V_Convert
                 buis = Console.ReadLine();
                 Console.Write("Enter Seller Password : ");
                 pass = Console.ReadLine();
-                add_seller_to_array(name, phone, buis, pass,ref num_seller, seller_name, seller_phone_num, seller_buisness, seller_password);
+                seller[num_seller]=add_seller_to_array(name, phone, buis, pass);
+                num_seller++;
                 Console.WriteLine("Seller id has been created");
                 Console.WriteLine("");
                 Console.WriteLine("Press 1 to Exit...");
@@ -603,49 +602,49 @@ namespace Daraz_V_Convert
                 }
             }
         }
-        static bool check_product(int num_products, int[] prices)
+        static bool check_product(int num_products, Product[] products)
         {
             bool yt = false;
             for (int x = 0; x < num_products; x++)
             {
-                if (prices[x] > 0)
+                if (products[x].prices > 0)
                 {
                     yt = true;
                 }
             }
             return yt;
         }
-        static bool check_seller(int num_seller,string[] seller_phone_num)
+        static bool check_seller(int num_seller,Seller[] seller)
         {
             bool yt = false;
             for (int x = 0; x < num_seller; x++)
             {
-                if (seller_phone_num[x] != "")
+                if (seller[x].phone_num != "")
                 {
                     yt = true;
                 }
             }
             return yt;
         }
-        static int check_name(string buyp, int num_products, string[] products)
+        static int check_name(string buyp, int num_products, Product[] products)
         {
             int yt = -1;
             for (int x = 0; x < num_products; x++)
             {
-                if (products[x] == buyp)
+                if (products[x].name == buyp)
                 {
                     yt = x;
                 }
             }
             return yt;
         }
-        static void show_seller_data(int num_seller, string[] seller_name, string[] seller_phone_num, string[] seller_buisness, string[] seller_password)
+        static void show_seller_data(int num_seller,Seller[] seller)
         {
             for (int i = 0; i < num_seller; i++)
             {
-                if (seller_phone_num[i] != "")
+                if (seller[i].phone_num != "")
                 {
-                    Console.WriteLine(seller_name[i] + "\t" + seller_phone_num[i] + "\t" + seller_buisness[i] + "\t" + seller_password[i]);
+                    Console.WriteLine(seller[i].name + "\t" + seller[i].phone_num + "\t" + seller[i].buisness + "\t" + seller[i].password);
                 }
             }
         }
@@ -673,13 +672,14 @@ namespace Daraz_V_Convert
             op = Console.ReadLine()[0];
             return op;
         }
-        static void add_product_to_array(string product, int price,ref int num_products, string[] products, int[] prices)
+        static Product add_product_to_array(string product1, int price1)
         {
-            products[num_products] = product;
-            prices[num_products] = price;
-            num_products++;
+            Product product = new Product();
+            product.name = product1;
+            product.prices = price1;
+            return product;
         }
-        static void add_product(ref int num_products, string[] products, int[] prices)
+        static void add_product(ref int num_products, Product[] products)
         {
             int exit = 0;
             for (int i = num_products; i < PRODUCT_COUNT; i++)
@@ -694,7 +694,8 @@ namespace Daraz_V_Convert
                 product = Console.ReadLine();
                 Console.Write("Enter the price of product : ");
                 price = int.Parse(Console.ReadLine());
-                add_product_to_array(product, price,ref num_products,products, prices);
+                products[num_products]=add_product_to_array(product, price);
+                num_products++;
                 Console.WriteLine("Product has been added Successfully .");
                 Console.WriteLine("");
                 Console.WriteLine("Press 1 to Exit ...");
@@ -705,9 +706,9 @@ namespace Daraz_V_Convert
                 }
             }
         }
-        static void show_products(int num_products, string[] products, int[] prices)
+        static void show_products(int num_products,Product[] products)
         {
-            bool yt = check_product(num_products,prices);
+            bool yt = check_product(num_products,products);
             Console.WriteLine("");
             if (yt)
             {
@@ -715,9 +716,9 @@ namespace Daraz_V_Convert
                 Console.WriteLine("");
                 for (int i = 0; i < num_products; i++)
                 {
-                    if (prices[i] > 0)
+                    if (products[i].prices > 0)
                     {
-                        Console.WriteLine(products[i] + "\t" + prices[i]);
+                        Console.WriteLine(products[i].name + "\t" + products[i].prices);
                     }
                 }
                 Console.WriteLine("");
@@ -732,9 +733,9 @@ namespace Daraz_V_Convert
                 clear_screen();
             }
         }
-        static void sorting(int num_products, string[] products, int[] prices)
+        static void sorting(int num_products, Product[] products)
         {
-            bool yt = check_product(num_products,prices);
+            bool yt = check_product(num_products,products);
             if (yt)
             {
                 Console.WriteLine("");
@@ -747,18 +748,18 @@ namespace Daraz_V_Convert
                     {
                         for (int m = x + 1; m < num_products; m++)
                         {
-                            if (prices[m] < prices[x])
+                            if (products[m].prices < products[x].prices)
                             {
-                                string temp = products[x];
-                                products[x] = products[m];
-                                products[m] = temp;
-                                int temp1 = prices[x];
-                                prices[x] = prices[m];
-                                prices[m] = temp1;
+                                string temp = products[x].name;
+                                products[x].name = products[m].name;
+                                products[m].name = temp;
+                                int temp1 = products[x].prices;
+                                products[x].prices = products[m].prices;
+                                products[m].prices = temp1;
                             }
                         }
                     }
-                    show_products(num_products,  products,prices);
+                    show_products(num_products,  products);
                 }
                 else if (op == 2)
                 {
@@ -766,18 +767,18 @@ namespace Daraz_V_Convert
                     {
                         for (int m = x + 1; m < num_products; m++)
                         {
-                            if (prices[m] > prices[x])
+                            if (products[m].prices > products[x].prices)
                             {
-                                string temp = products[x];
-                                products[x] = products[m];
-                                products[m] = temp;
-                                int temp1 = prices[x];
-                                prices[x] = prices[m];
-                                prices[m] = temp1;
+                                string temp = products[x].name;
+                                products[x].name = products[m].name;
+                                products[m].name = temp;
+                                int temp1 = products[x].prices;
+                                products[x].prices = products[m].prices;
+                                products[m].prices = temp1;
                             }
                         }
                     }
-                    show_products(num_products,products,prices);
+                    show_products(num_products,products);
                 }
                 else
                 {
@@ -794,25 +795,25 @@ namespace Daraz_V_Convert
                 clear_screen();
             }
         }
-        static void delete_products(string seller_pass,int num_products, string[] products, int[] prices)
+        static void delete_products(string seller_pass,int num_products, Product[] products)
         {
             string delete_product;
             int index = -1;
             string password;
-            bool yt = check_product(num_products,prices);
             Console.WriteLine("Seller Menu > Delete Product > ");
             Console.WriteLine("");
             Console.Write("Enter Password : ");
             password = Console.ReadLine();
             if (password == seller_pass)
             {
+                bool yt = check_product(num_products, products);
                 if (yt)
                 {
                     Console.Write("Enter the name of product you want to delete : ");
                     delete_product = Console.ReadLine();
                     for (int i = 0; i < num_products; i++)
                     {
-                        if (delete_product == products[i])
+                        if (delete_product == products[i].name)
                         {
                             index = i;
                         }
@@ -826,8 +827,8 @@ namespace Daraz_V_Convert
                     {
                         Console.WriteLine("");
                         Console.WriteLine(products[index] + " has been deleted .");
-                        products[index] = "";
-                        prices[index] = 0;
+                        products[index].name = "";
+                        products[index].prices = 0;
                     }
                     Console.WriteLine("");
                     clear_screen();
@@ -851,11 +852,11 @@ namespace Daraz_V_Convert
             }
 
         }
-        static void update_seller(int num_products, string[] products, int[] prices)
+        static void update_seller(int num_products, Product[] products)
         {
             Console.WriteLine("Seller Menu > Update Product >");
             Console.WriteLine("");
-            bool yt = check_product(num_products,prices);
+            bool yt = check_product(num_products,products);
             if (yt)
             {
                 string update_product;
@@ -864,7 +865,7 @@ namespace Daraz_V_Convert
                 update_product = Console.ReadLine();
                 for (int i = 0; i < num_products; i++)
                 {
-                    if (update_product == products[i])
+                    if (update_product == products[i].name)
                     {
                         index = i;
                     }
@@ -876,11 +877,10 @@ namespace Daraz_V_Convert
                 else
                 {
                     Console.Write("Enter the updated name of the product : ");
-                    products[index] = Console.ReadLine();
+                    products[index].name = Console.ReadLine();
                     Console.Write("Enter the updated price of the product : ");
-                    prices[index] = int.Parse(Console.ReadLine());
-                    Console.WriteLine(products[index] + " has been updated. Its Current Price is " + prices[index] + " .");
-
+                    products[index].prices = int.Parse(Console.ReadLine());
+                    Console.WriteLine(products[index] + " has been updated. Its Current Price is " + products[index].prices + " .");
                 }
             }
             else
@@ -952,27 +952,29 @@ namespace Daraz_V_Convert
             char op = Console.ReadLine()[0];
             return op;
         }
-        static void add_cust_to_array(string name, string pass,ref int num_cust,string[] user_nameA,string[] user_passwordA)
+        static User add_cust_to_array(string name, string pass)
         {
-            user_nameA[num_cust] = name;
-            user_passwordA[num_cust] = pass;
-            num_cust++;
+            User u = new User();
+            u.name = name;
+            u.password = pass;
+            return u;
         }
-        static void create_account_customer(ref int num_cust, string[] user_nameA, string[] user_passwordA)
+        static void create_account_customer(ref int num_cust, User[] user )
         {
             string name, pass;
             Console.Write("Enter your name : ");
             name = Console.ReadLine();
             Console.Write("Enter your password : ");
             pass = Console.ReadLine();
-            add_cust_to_array(name, pass,ref num_cust,user_nameA, user_passwordA);
+            user[num_cust]=add_cust_to_array(name, pass);
+            num_cust++;
             Console.WriteLine("Welcome " + name);
             Console.WriteLine("Your Account has been created Successfully.");
 
         }
-        static void show_product_cust(int num_products,string[] products,int[] prices,ref int num_product1,string[] buy_productA,int[] buy_product_price)
+        static void show_product_cust(int num_products,Product[] products,ref int num_product1,string[] buy_productA,int[] buy_product_price)
         {
-            bool yt = check_product(num_products, prices);
+            bool yt = check_product(num_products,products);
             if (yt)
             {
                 string buy_products = "";
@@ -986,9 +988,9 @@ namespace Daraz_V_Convert
                         Console.WriteLine("Products\tPrices");
                         for (int i = 0; i < num_products; i++)
                         {
-                            if (prices[i] > 0)
+                            if (products[i].prices > 0)
                             {
-                                Console.WriteLine(products[i] + "\t" + prices[i]);
+                                Console.WriteLine(products[i].name + "\t" + products[i].prices);
                             }
                         }
                         Console.WriteLine("Which product you want to buy(press E to Exit");
@@ -1000,8 +1002,8 @@ namespace Daraz_V_Convert
                         int ft = check_name(buy_products, num_products,products);
                         if (ft != -1)
                         {
-                            buy_productA[num_product1] = buy_products;
-                            buy_product_price[num_product1] = prices[ft];
+                            buy_productA[num_product1] = products[ft].name;
+                            buy_product_price[num_product1] = products[ft].prices;
                             num_product1++;
                             Console.WriteLine(buy_products + " has been succesfully added to the Cart.");
                             clear_screen();
@@ -1041,7 +1043,7 @@ namespace Daraz_V_Convert
                     phone = parse(record, 2);
                     buisness = parse(record, 3);
                     pass = parse(record, 4);
-                    add_seller_to_array(name, phone, buisness, pass,ref num_seller,seller_name,seller_phone_num, seller_buisness, seller_password);
+                    //add_seller_to_array(name, phone, buisness, pass,ref num_seller,seller_name,seller_phone_num, seller_buisness, seller_password);
                 }
                 var.Close();
             }
@@ -1060,7 +1062,7 @@ namespace Daraz_V_Convert
                 {
                     product = parse(record, 1);
                     price = int.Parse(parse(record, 2));
-                    add_product_to_array(product, price,ref num_products,products, prices);
+                    //add_product_to_array(product, price,ref num_products,products, prices);
                 }
                 var.Close();
             }
@@ -1078,7 +1080,7 @@ namespace Daraz_V_Convert
                 {
                     name = parse(record, 1);
                     pass = parse(record, 2);
-                    add_cust_to_array(name, pass,ref num_cust, user_nameA, user_passwordA);
+                    //add_cust_to_array(name, pass,ref num_cust, user_nameA, user_passwordA);
                 }
                 var.Close();
             }
