@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\buy_products.cs" />
     <Compile Include="BL\Product.cs" />
     <Compile Include="BL\Seller.cs" />
     <Compile Include="BL\User.cs" />

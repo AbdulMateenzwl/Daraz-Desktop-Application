@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Daraz_V_Convert.BL
 {
-    internal class Seller
+    internal class buy_products
     {
         public string name="";
-        public string phone_num="";
-        public string buisness="";
-        public string password="";
-        public List<Product> product=new List<Product>();
+        public int price=0;
     }
 }

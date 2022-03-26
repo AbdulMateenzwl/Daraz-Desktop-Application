@@ -8,7 +8,11 @@ namespace Daraz_V_Convert.BL
 {
     internal class User
     {
-        public string name;
-        public string password;
+        public string name="";
+        public string password="";
+        public string email="";
+        public string pin="";
+        public string phone="";
+        public List<buy_products> buy_product = new List<buy_products>();
     }
 }
