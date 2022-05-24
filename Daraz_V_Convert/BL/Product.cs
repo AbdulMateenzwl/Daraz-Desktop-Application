@@ -10,5 +10,6 @@ namespace Daraz_V_Convert.BL
     {
         public string name;
         public int prices;
+        private string type;
     }
 }

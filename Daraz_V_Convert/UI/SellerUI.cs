@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Daraz_V_Convert.BL
+namespace Daraz_V_Convert.UI
 {
-    class buy_products
+    internal class SellerUI
     {
-        public string name="";
-        public int price=0;
     }
 }

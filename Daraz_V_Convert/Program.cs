@@ -5,29 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Daraz_V_Convert.BL;
-
+using Daraz_V_Convert.DL;
+using Daraz_V_Convert.UI;
 namespace Daraz_V_Convert
 {
     class Program
     {
         ///////////////////////////////        Main Menu    /////////////////////////
-        //check//
+        ///check\\\
         static void Main(string[] args)
-        {
-            List<Seller> seller = new List<Seller>();
+        {/*
             List<User> user = new List<User>();
-            load_seller_data(seller);
+            SellerDL.load_data();
             load_customers_data(user);
             char main_menu_option = '5';
             string admin_pass = "1234";
             string pass = "";
             while (main_menu_option != '4')
             {
-                header();
-                main_menu_option = main_menu();
+                MainUI.header();
+                main_menu_option = MainUI.main_menu();
                 if (main_menu_option == '1')
                 {
-                    header();
+                    MainUI.header();
                     Console.WriteLine("Admin > ");
                     Console.WriteLine("");
                     Console.Write("Enter Password : ");
@@ -35,71 +35,29 @@ namespace Daraz_V_Convert
                     if (pass == admin_pass)
                     {
                         char admin_option = '9';
-                        string delete_seller = "";
+                        
                         while (admin_option != '6')
                         {
-                            header();
+                            MainUI.header();
                             admin_option = admin_menu();
-                            header();
+                            MainUI.header();
                             if (admin_option == '1')
                             {
-                                add_seller_function(seller);
+                                SellerDL.add_list( SellerUI.add_seller());
                             }
                             else if (admin_option == '2')
                             {
-                                Console.WriteLine("Admin Menu > View Seller >");
-                                Console.WriteLine("");
-                                if (seller.Count > 0)
-                                {
-                                    Console.WriteLine("Name\tNumber\tBuisness\tPassword");
-                                    show_seller_data(seller);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("You have not entered any data .");
-                                }
-                                Console.WriteLine("");
-                                clear_screen();
+                                SellerUI.view_all_seller(SellerDL.get_list());
                             }
                             else if (admin_option == '3')
                             {
                                 Console.WriteLine("Admin Option > History >");
                                 Console.WriteLine("");
-                                Console.WriteLine("Ali Just bought Two bags . ");
-                                for (int i = 0; i < seller.Count; i++)
-                                {
-                                    Console.WriteLine("You just added " + seller[i].name + " to " + seller[i].buisness + " Buisness list .");
-                                }
-                                Console.WriteLine("");
-                                clear_screen();
+                                
                             }
                             else if (admin_option == '4')
                             {
-                                Console.WriteLine("Admin Menu > Delete Seller > ");
-                                Console.WriteLine("");
-                                Console.Write("Enter Password : ");
-                                pass = Console.ReadLine();
-                                if (pass == admin_pass)
-                                {
-                                    int index = -1;
-                                    Console.Write("Enter the name of seller you want to delete : ");
-                                    delete_seller = Console.ReadLine();
-                                    index = seller_index(seller, delete_seller);
-                                    if (index != -1)
-                                    {
-                                        Console.WriteLine(seller[index].name + " has been deleted from " + seller[index].buisness + " List .");
-                                        seller.RemoveAt(index);
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("There is no seller named as " + delete_seller + " . ");
-                                    }
-                                }
-                                else
-                                {
-                                    Console.WriteLine("You have entered the wrong Password .");
-                                }
-                                clear_screen();
+                                
                             }
                             else if (admin_option == '5')
                             {
@@ -110,7 +68,7 @@ namespace Daraz_V_Convert
                             {
                                 Console.WriteLine("Thanks for using our program .");
                                 Console.WriteLine("We are happy to serve you .");
-                                clear_screen();
+                                MainUI.clear_screen();
                             }
                             else
                             {
@@ -122,7 +80,7 @@ namespace Daraz_V_Convert
                     {
                         Console.WriteLine("You have entered the Wrong Password .");
                         Console.WriteLine("Please Enter the Correct Password .");
-                        clear_screen();
+                        MainUI.clear_screen();
                     }
                 }
                 else if (main_menu_option == '2')
@@ -131,7 +89,7 @@ namespace Daraz_V_Convert
                     int index = -1;
                     char exit = ' ';
                     char seller_option = '9';
-                    header();
+                    MainUI.header();
                     Console.WriteLine("Seller >");
                     Console.WriteLine("");
                     Console.WriteLine("1)  Create new account");
@@ -140,7 +98,7 @@ namespace Daraz_V_Convert
                     exit = Console.ReadLine()[0];
                     if (exit == '1')
                     {
-                        header();
+                        MainUI.header();
                         seller.Add(add_seller());
                         Console.WriteLine("Seller id has been created");
                         Console.WriteLine("");
@@ -148,7 +106,7 @@ namespace Daraz_V_Convert
                     }
                     if (exit == '2')
                     {
-                        header();
+                        MainUI.header();
                         Console.WriteLine("Seller > Login >");
                         Console.WriteLine("");
                         Console.Write("Enter your name : ");
@@ -163,12 +121,12 @@ namespace Daraz_V_Convert
                             Console.WriteLine("Hope you are fine .");
                             Console.WriteLine("Lets get back to work .");
                             Console.WriteLine("");
-                            clear_screen();
+                            MainUI.clear_screen();
                             while (seller_option != '7')
                             {
-                                header();
-                                seller_option = seller_menu();
-                                header();
+                                MainUI.header();
+                                seller_option = SellerUI.seller_menu();
+                                MainUI.header();
                                 if (seller_option == '1')
                                 {
                                     add_product_function(seller, index);
@@ -203,12 +161,12 @@ namespace Daraz_V_Convert
                                 {
                                     Console.WriteLine("Thanks for using our Program.");
                                     Console.WriteLine("We are happy to serve you.");
-                                    clear_screen();
+                                    MainUI.clear_screen();
                                 }
                                 else
                                 {
                                     Console.WriteLine("You have entered the wrong input");
-                                    clear_screen();
+                                    MainUI.clear_screen();
                                 }
                             }
                         }
@@ -217,7 +175,7 @@ namespace Daraz_V_Convert
                             Console.WriteLine("The Password You entered is Incorrrect.");
                             Console.WriteLine("Please enter again...");
                             Console.WriteLine("");
-                            clear_screen();
+                            MainUI.clear_screen();
                         }
                     }
                     else
@@ -231,7 +189,7 @@ namespace Daraz_V_Convert
                     char exit = ' ';
                     while (exit != 'e')
                     {
-                        header();
+                        MainUI.header();
                         string user_name, user_password;
                         Console.WriteLine("1)  Create new account");
                         Console.WriteLine("2)  Login(if you already have an account)");
@@ -239,17 +197,17 @@ namespace Daraz_V_Convert
                         exit = Console.ReadLine()[0];
                         if (exit == '1')
                         {
-                            header();
+                            MainUI.header();
                             Console.WriteLine("Customer > Create New Account >");
                             Console.WriteLine("");
                             create_account_customer(user);
                             exit = '2';
-                            clear_screen();
+                            MainUI.clear_screen();
                         }
                         if (exit == '2')
                         {
                             int index = -1;
-                            header();
+                            MainUI.header();
                             Console.WriteLine("Customer > Login >");
                             Console.WriteLine("");
                             Console.Write("Enter your name : ");
@@ -261,9 +219,9 @@ namespace Daraz_V_Convert
                             {
                                 while (customer_option != '6')
                                 {
-                                    header();
+                                    MainUI.header();
                                     customer_option = customer_menu();
-                                    header();
+                                    MainUI.header();
                                     if (customer_option == '1')
                                     {
                                         Console.WriteLine("Customer Menu > View Products >");
@@ -295,7 +253,7 @@ namespace Daraz_V_Convert
                                             }
                                             else if (op == '2')
                                             {
-                                                header();
+                                                MainUI.header();
                                                 string remove_product;
                                                 Console.WriteLine("Customer Menu > Remove Product >");
                                                 Console.WriteLine("");
@@ -315,11 +273,11 @@ namespace Daraz_V_Convert
                                         {
                                             Console.WriteLine("Please Enter some Products to Cart to buy .");
                                         }
-                                        clear_screen();
+                                        MainUI.clear_screen();
                                     }
                                     if (customer_option == '3')
                                     {
-                                        header();
+                                        MainUI.header();
                                         Console.WriteLine("Customer Menu > Payment >");
                                         Console.WriteLine("");
                                         int op1;
@@ -342,7 +300,7 @@ namespace Daraz_V_Convert
                                                 else
                                                 {
                                                     Console.WriteLine("Please Enter Correct Card Number.");
-                                                    clear_screen();
+                                                    MainUI.clear_screen();
                                                     break;
                                                 }
                                                 bool check = user_info_input(user, index);
@@ -352,20 +310,20 @@ namespace Daraz_V_Convert
                                                     Console.WriteLine("You have to pay cash on delivery .");
                                                     user[index].buy_product.Clear();
                                                     Console.WriteLine("");
-                                                    clear_screen();
+                                                    MainUI.clear_screen();
                                                 }
                                                 break;
                                             }
                                         }
                                         else if (op1 == 2)
                                         {
-                                            header();
+                                            MainUI.header();
                                             user_info_input(user, index);
                                             Console.WriteLine("Your order has been placed.You will recieve parcel in 3 to 5 working days.");
                                             Console.WriteLine("You have to pay cash on delivery .");
                                             user[index].buy_product.Clear();
                                             Console.WriteLine("");
-                                            clear_screen();
+                                            MainUI.clear_screen();
                                         }
                                         else
                                         {
@@ -389,7 +347,7 @@ namespace Daraz_V_Convert
                                         Console.WriteLine("Thanks for using our program.");
                                         Console.WriteLine("We are happy to serve you.");
                                         exit = 'e';
-                                        clear_screen();
+                                        MainUI.clear_screen();
                                     }
                                     else
                                     {
@@ -401,14 +359,14 @@ namespace Daraz_V_Convert
                             {
                                 Console.WriteLine("Sorry it seems like you do not  have an account");
                                 Console.WriteLine("Try to connect later...");
-                                clear_screen();
+                                MainUI.clear_screen();
                             }
                         }
                         else
                         {
-                            header();
+                            MainUI.header();
                             Console.WriteLine("You have entered the wrong input.");
-                            clear_screen();
+                            MainUI.clear_screen();
                         }
                         Console.Clear();
                     }
@@ -417,39 +375,22 @@ namespace Daraz_V_Convert
                 {
                     Console.WriteLine("Thanks for using our Program..");
                     Console.WriteLine("We are happy to serve you");
-                    clear_screen();
+                    MainUI.clear_screen();
                     //Store DATA
                     store_Customer_data_to_file(user);
                     store_seller_data_to_file(seller);
                 }
                 else
                 {
-                    header();
+                    MainUI.header();
                     Console.WriteLine("You have entered the wrong input");
-                    clear_screen();
+                    MainUI.clear_screen();
                 }
-            }
+            }*/
         }
 
         ////////////////////////////////////////////////Functions/////////////////////////////////////
-        static void store_seller_data_to_file(List<Seller> seller)
-        {
-            string path = "seller.txt";
-            StreamWriter var = new StreamWriter(path, false);
-            for (int i = 0; i < seller.Count; i++)
-            {
-                if (seller[i].name != "")
-                {
-                    var.Write(seller[i].name + "$" + seller[i].phone_num + "$" + seller[i].buisness + "$" + seller[i].password + "$");
-                }
-                for (int m = 0; m < seller[i].product.Count; m++)
-                {
-                    var.Write(seller[i].product[m].name + "$" + seller[i].product[m].prices + "$");
-                }
-                var.WriteLine("");
-            }
-            var.Close();
-        }
+        
         static void store_Customer_data_to_file(List<User> user)
         {
             string path = "cust.txt";
@@ -468,36 +409,7 @@ namespace Daraz_V_Convert
             }
             var.Close();
         }
-        static void header()
-        {
-            Console.Clear();
-            Console.WriteLine("**************************************************************************************");
-            Console.WriteLine("**************************************************************************************");
-            Console.WriteLine("*****                                                                            *****");
-            Console.WriteLine("***            *****          ***       *****         ***       ***********        ***");
-            Console.WriteLine("**             **  ***       *   *      **   **      *   *      **      **          **");
-            Console.WriteLine("**             **    **     **   **     ******      **   **          **             **");
-            Console.WriteLine("**             **  ***     *********    **  **     *********      **     **         **");
-            Console.WriteLine("***            *****      **       **   **    **  **       **   ***********        ***");
-            Console.WriteLine("*****                                                                            *****");
-            Console.WriteLine("**************************************************************************************");
-            Console.WriteLine("**************************************************************************************");
-            Console.WriteLine("");
-            Console.WriteLine("");
-        }
-        static char main_menu()
-        {
-            Console.WriteLine("///////////////////   MAIN MENU     /////////////////////");
-            Console.WriteLine("Login as :");
-            Console.WriteLine("1)   Admin");
-            Console.WriteLine("2)   Seller");
-            Console.WriteLine("3)   Customer");
-            Console.WriteLine("");
-            Console.WriteLine("Press 4 to Exit");
-            char op;
-            op = Console.ReadLine()[0];
-            return op;
-        }
+
         static string parse(string row, int column)
         {
             int dollar_count = 1;
@@ -534,49 +446,8 @@ namespace Daraz_V_Convert
             op = Console.ReadLine()[0];
             return op;
         }
-        static void add_seller_function(List<Seller> seller)
-        {
-            while (true)
-            {
-                int exit = 0;
-                header();
-                seller.Add(add_seller());
-                Console.WriteLine("");
-                Console.WriteLine("Press 1 to Exit...");
-                exit = int.Parse(Console.ReadLine());
-                if (exit == 1)
-                {
-                    break;
-                }
-            }
-        }
-        static Seller add_seller()
-        {
-            Seller input = new Seller();
-            Console.WriteLine("Seller > Create new Account >");
-            Console.WriteLine("");
-            Console.Write("Enter Seller Name : ");
-            input.name = Console.ReadLine();
-            Console.Write("Enter Seller Phone Number : ");
-            input.phone_num = Console.ReadLine();
-            Console.Write("Enter Seller Buisness : ");
-            input.buisness = Console.ReadLine();
-            Console.Write("Enter Seller Password : ");
-            input.password = Console.ReadLine();
-            Console.WriteLine("Seller id has been created");
-            return input;
-        }
-        static int check_product(string name,List<Product> product)
-        {
-            for (int i = 0; i < product.Count; i++)
-            {
-                if (name == product[i].name)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
+        
+        
         static int check_user(List<User> user,string name,string pass)
         {
             for (int i = 0; i < user.Count; i++)
@@ -608,47 +479,13 @@ namespace Daraz_V_Convert
             }
             return yt;
         }
-        static void show_seller_data(List<Seller> seller)
-        {
-            for (int i = 0; i < seller.Count; i++)
-            {
-                show_one_seller(seller[i].name, seller[i].phone_num, seller[i].buisness, seller[i].password);
-            }
-        }
-        static void show_one_seller(string name,string phone_num,string buisness,string password)
-        {
-            Console.WriteLine(name + "\t" + phone_num + "\t" + buisness + "\t" + password);
-        }
-        static void clear_screen()
-        {
-            Console.Write("Press any key to continue...");
-            Console.ReadKey();
-            Console.Clear();
-        }
-        static char seller_menu()
-        {
-            char op;
-            Console.WriteLine("////////////////   Seller Menu   ////////////////");
-            Console.WriteLine("");
-            Console.WriteLine("Welcome Seller");
-            Console.WriteLine("1)  Add Product");
-            Console.WriteLine("2)  View Products");
-            Console.WriteLine("3)  Sort By Price");
-            Console.WriteLine("4)  Delete Product");
-            Console.WriteLine("5)  Update price of a Product");
-            Console.WriteLine("6)  Update Password");
-            Console.WriteLine("7)  Exit");
-            Console.WriteLine("");
-            Console.WriteLine("Enter any option");
-            op = Console.ReadLine()[0];
-            return op;
-        }
+        
         static void add_product_function(List<Seller> seller, int index)
         {
             int exit = 0;
             while (true)
             {
-                header();
+                MainUI.header();
                 Console.WriteLine("Seller Menu > Add Products > ");
                 Console.WriteLine("");
                 seller[index].product.Add(add_product());
@@ -683,14 +520,14 @@ namespace Daraz_V_Convert
                     show_one_product(product[i].name,product[i].prices);
                 }
                 Console.WriteLine("");
-                clear_screen();
+                MainUI.clear_screen();
             }
             else
             {
                 Console.WriteLine("You have not entered any Products.");
                 Console.WriteLine("Go to option 1 to add some products.");
                 Console.WriteLine("");
-                clear_screen();
+                MainUI.clear_screen();
             }
         }
         static void show_one_product(String name,int price)
@@ -755,7 +592,7 @@ namespace Daraz_V_Convert
                 Console.WriteLine("You have Entered no Products .");
                 Console.WriteLine("Go to Option 1 to add some Products .");
                 Console.WriteLine("");
-                clear_screen();
+                MainUI.clear_screen();
             }
         }
         static void delete_products(string seller_pass, List<Product> product)
@@ -783,7 +620,7 @@ namespace Daraz_V_Convert
                         product.RemoveAt(idx);
                     }
                     Console.WriteLine("");
-                    clear_screen();
+                    MainUI.clear_screen();
                 }
                 else
                 {
@@ -791,7 +628,7 @@ namespace Daraz_V_Convert
                     Console.WriteLine("You have Entered no Products .");
                     Console.WriteLine("Go to Option 1 to add some Products .");
                     Console.WriteLine("");
-                    clear_screen();
+                    MainUI.clear_screen();
                 }
             }
             else
@@ -800,7 +637,7 @@ namespace Daraz_V_Convert
                 Console.WriteLine("The Password You entered is Incorrrect.");
                 Console.WriteLine("Please enter again...");
                 Console.WriteLine("");
-                clear_screen();
+                MainUI.clear_screen();
             }
         }
         static void update_product(List<Product> products)
@@ -832,7 +669,7 @@ namespace Daraz_V_Convert
                 Console.WriteLine("Go to Option 1 to add some Products .");
             }
             Console.WriteLine("");
-            clear_screen();
+            MainUI.clear_screen();
         }
         static string update_password(string password)
         {
@@ -878,7 +715,7 @@ namespace Daraz_V_Convert
                 Console.WriteLine("You have entered the Wrong Password .");
             }
             Console.WriteLine("");
-            clear_screen();
+            MainUI.clear_screen();
             return password;
         }
         static char customer_menu()
@@ -910,7 +747,7 @@ namespace Daraz_V_Convert
             else
             {
                 Console.WriteLine("Please Enter Valid Phone Number.");
-                clear_screen();
+                MainUI.clear_screen();
                 return false;
             }
             Console.WriteLine("On which address you want to recieve parcel.");
@@ -935,7 +772,7 @@ namespace Daraz_V_Convert
             else
             {
                 Console.WriteLine("Please Enter Correct Email Address .");
-                clear_screen();
+                MainUI.clear_screen();
                 return false;
             }
             return check;
@@ -959,7 +796,7 @@ namespace Daraz_V_Convert
                 string buy_products = "";
                 while (true)
                 {
-                    header();
+                    MainUI.header();
                     Console.WriteLine("Customer_Menu > View Products >");
                     Console.WriteLine("");
                     Console.WriteLine("Products\tPrices");
@@ -990,13 +827,13 @@ namespace Daraz_V_Convert
                     {
                         Console.WriteLine("There is no Such Product .");
                     }
-                    clear_screen();
+                    MainUI.clear_screen();
                 }
             }
             else
             {
                 Console.WriteLine("There are no Products to display .");
-                clear_screen();
+                MainUI.clear_screen();
             }
         }
         static void display_user_info(List<User> user, int index)
@@ -1016,38 +853,7 @@ namespace Daraz_V_Convert
                 Console.WriteLine(" Phone Number :\t " + user[index].phone);
             }
             Console.WriteLine("");
-            clear_screen();
-        }
-        static void load_seller_data(List<Seller> seller)
-        {
-            string path = "seller.txt";
-            if (File.Exists(path))
-            {
-                StreamReader var = new StreamReader(path);
-                string record;
-                while ((record = var.ReadLine()) != null)
-                {
-                    Seller input = new Seller();
-                    input.name = parse(record, 1);
-                    input.phone_num = parse(record, 2);
-                    input.buisness = parse(record, 3);
-                    input.password = parse(record, 4);
-                    for (int i = 5; i < 100; i = i + 2)
-                    {
-                        Product inp = new Product();
-                        if (parse(record, i) == "")
-                        {
-                            break;
-                        }
-                        inp.name = parse(record, i);
-                        inp.prices = int.Parse(parse(record, i + 1));
-                        input.product.Add(inp);
-                    }
-                    seller.Add(input);
-                }
-                var.Close();
-            }
-
+            MainUI.clear_screen();
         }
         static void load_customers_data(List<User> user)
         {
@@ -1078,19 +884,6 @@ namespace Daraz_V_Convert
                 user.Add(input_f);
             }
             var.Close();
-        }
-        static int seller_index(List<Seller> seller,string seller_name)
-        {
-            int index = -1;
-            for (int i = 0; i < seller.Count; i++)
-            {
-                if (seller_name == seller[i].name)
-                {
-                    index = i;
-                    break;
-                }
-            }
-            return index;
         }
         static int seller_login(List<Seller> seller, string seller_name,string password)
         {

@@ -8,10 +8,42 @@ namespace Daraz_V_Convert.BL
 {
     internal class Seller
     {
-        public string name="";
-        public string phone_num="";
-        public string buisness="";
-        public string password="";
-        public List<Product> product=new List<Product>();
+        private string name="";
+        private string phone_num="";
+        private string buisness="";
+        private string password="";
+        private List<Product> product=new List<Product>();
+        public string Name{get { return name; } set { name = value; } }
+        public string PhoneNum{get { return phone_num; } set { phone_num = value; } }
+        public string Buisness{get { return buisness; } set { buisness = value; } }
+        public string Password{get { return password; } set { password = value; } }
+        public Seller() { }
+        public Seller(string names,string ph,string buiss,string pass)
+        {
+            name=names;
+            phone_num=ph;
+            buisness=buiss;
+            password=pass;
+        }
+
+        public void add_product(Product input)
+        {
+            product.Add(input);
+        }
+        public List<Product> get_product_list()
+        {
+            return product;
+        }
+        public static int check_product(string name)
+        {
+            for (int i = 0; i < product.Count; i++)
+            {
+                if (name == product[i].name)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

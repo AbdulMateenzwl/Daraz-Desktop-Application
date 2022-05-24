@@ -14,5 +14,14 @@ namespace Daraz_V_Convert.BL
         public string pin="";
         public string phone="";
         public List<buy_products> buy_product = new List<buy_products>();
+        public User() { }
+        public User(string names, string pass, string em,string pn,string ph)
+        {
+            name = names;
+            password = pass;
+            email=em;
+            pin=pn;
+            phone=ph;
+        }
     }
 }
