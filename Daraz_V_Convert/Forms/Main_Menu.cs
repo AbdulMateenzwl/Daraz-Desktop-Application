@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Daraz_V_Convert.Forms;
 namespace Daraz_V_Convert
 {
     public partial class Main_Menu : Form
@@ -27,9 +27,13 @@ namespace Daraz_V_Convert
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Sign_In open = new Sign_In();
+            this.Hide();
+            open.Show();
         }
     }
 }

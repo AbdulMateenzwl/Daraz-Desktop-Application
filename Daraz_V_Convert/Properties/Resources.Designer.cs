@@ -59,5 +59,45 @@ namespace Daraz_V_Convert.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_3733 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-3733", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37331 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37331", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37332 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37332", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37333 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37333", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

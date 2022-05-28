@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace Daraz_V_Convert.BL
 {
-    internal class User
+    public class User
     {
-        public string name="";
-        public string password="";
-        public string email="";
-        public string pin="";
-        public string phone="";
-        public List<buy_products> buy_product = new List<buy_products>();
+        private string name;
+        private string password;
+        private string email;
+        private string pin;
+        private string phone;
+        private List<Product> buy_product = new List<Product>();
+        public string Name { get { return name; } set { name = value; } }
+        public string Password { get { return password; } set { password = value; } }
+        public string Email { get { return email; } set { email = value; } }
+        public string Pin { get { return pin; } set { pin = value; } }
+        public string Phone { get { return phone; } set { phone = value; } }
+        public void add_product_list(Product input)
+        {
+            buy_product.Add(input);
+        }
+        public List<Product> get_product_list()
+        {
+            return buy_product;
+        }
         public User() { }
         public User(string names, string pass, string em,string pn,string ph)
         {

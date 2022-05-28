@@ -45,16 +45,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\buy_products.cs" />
+    <Compile Include="BL\Admin.cs" />
     <Compile Include="BL\Product.cs" />
     <Compile Include="BL\Seller.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="DL\AdminDL.cs" />
     <Compile Include="DL\SellerDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
+    <Compile Include="Forms\AdminChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminChangePassword.Designer.cs">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Main_Menu.Designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerMenu.Designer.cs">
+      <DependentUpon>SellerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Sign_In.cs">
       <SubType>Form</SubType>
@@ -76,8 +96,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerMenu.resx">
+      <DependentUpon>SellerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -86,6 +115,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-3733.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37331.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37332.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37333.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Daraz_V_Convert.BL
 {
-    internal class Seller
+    public class Seller
     {
-        private string name="";
-        private string phone_num="";
-        private string buisness="";
-        private string password="";
+        private string name;
+        private string phone_num;
+        private string buisness;
+        private string password;
         private List<Product> product=new List<Product>();
         public string Name{get { return name; } set { name = value; } }
         public string PhoneNum{get { return phone_num; } set { phone_num = value; } }
@@ -34,16 +34,16 @@ namespace Daraz_V_Convert.BL
         {
             return product;
         }
-        public static int check_product(string name)
+        public Product check_product(string name)
         {
             for (int i = 0; i < product.Count; i++)
             {
                 if (name == product[i].name)
                 {
-                    return i;
+                    return product[i];
                 }
             }
-            return -1;
+            return null;
         }
     }
 }

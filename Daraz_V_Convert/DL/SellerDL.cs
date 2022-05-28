@@ -19,7 +19,18 @@ namespace Daraz_V_Convert.DL
         {
             return seller;
         }
-        public static void load_data()
+        public static Seller get_seller(string seller_name,string pass)
+        {
+            for (int i = 0; i < seller.Count; i++)
+            {
+                if (seller_name == seller[i].Name && pass == seller[i].Password)
+                {
+                    return seller[i];
+                }
+            }
+            return null;
+        }
+        /*public static void load_data()
         {
             string path = "seller.txt";
             if (File.Exists(path))
@@ -28,7 +39,7 @@ namespace Daraz_V_Convert.DL
                 string record;
                 while ((record = var.ReadLine()) != null)
                 {
-                    /*Seller input = new Seller();
+                    Seller input = new Seller();
                     input.name = parse(record, 1);
                     input.phone_num = parse(record, 2);
                     input.buisness = parse(record, 3);
@@ -44,24 +55,13 @@ namespace Daraz_V_Convert.DL
                         inp.prices = int.Parse(parse(record, i + 1));
                         input.product.Add(inp);
                     }
-                    seller.Add(input);*/
+                    seller.Add(input);
                 }
                 var.Close();
             }
 
-        }
-        public static Seller seller_index(string seller_name)
-        {
-            for (int i = 0; i < seller.Count; i++)
-            {
-                if (seller_name == seller[i].name)
-                {
-                    return seller[i];
-                }
-            }
-            return null;
-        }
-        public static void store_data(List<Seller> seller)
+        }*/
+        /*public static void store_data(List<Seller> seller)
         {
             StreamWriter var = new StreamWriter(path, false);
             for (int i = 0; i < seller.Count; i++)
@@ -77,6 +77,6 @@ namespace Daraz_V_Convert.DL
                 var.WriteLine("");
             }
             var.Close();
-        }
+        }*/
     }
 }
