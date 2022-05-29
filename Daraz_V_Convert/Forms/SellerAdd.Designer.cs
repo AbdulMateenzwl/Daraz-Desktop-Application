@@ -182,13 +182,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_37335;
-            this.pictureBox1.Location = new System.Drawing.Point(570, 319);
+            this.pictureBox1.Location = new System.Drawing.Point(563, 318);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(147, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(154, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;

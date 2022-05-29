@@ -287,5 +287,11 @@
   <ItemGroup>
     <None Include="Resources\Unti2w2tled-12.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8664903_eye_slash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8664903_eye_slash_icon%281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

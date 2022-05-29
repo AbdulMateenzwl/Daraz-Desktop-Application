@@ -21,7 +21,14 @@ namespace Daraz_V_Convert.Forms
         }
         private void Sign_In_Load(object sender, EventArgs e)
         {
-
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+            }
+            else if (!checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+            }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -58,6 +65,23 @@ namespace Daraz_V_Convert.Forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+            }
+            else if(!checkBox1.Checked)
+            {
+                textBox2.PasswordChar ='\0';
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

@@ -73,6 +73,26 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8664903_eye_slash_icon {
+            get {
+                object obj = ResourceManager.GetObject("8664903_eye_slash_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8664903_eye_slash_icon_1_ {
+            get {
+                object obj = ResourceManager.GetObject("8664903_eye_slash_icon(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagews {
             get {
                 object obj = ResourceManager.GetObject("imagews", resourceCulture);

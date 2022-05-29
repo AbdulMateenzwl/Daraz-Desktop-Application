@@ -24,7 +24,16 @@ namespace Daraz_V_Convert.Forms
 
         private void AdminChangePassword_Load(object sender, EventArgs e)
         {
-
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+                textBox3.PasswordChar = '*';
+            }
+            else if (!checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+                textBox3.PasswordChar = '\0';
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -65,6 +74,20 @@ namespace Daraz_V_Convert.Forms
             this.Hide();
             AdminMenu m = new AdminMenu();
             m.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+                textBox3.PasswordChar = '*';
+            }
+            else if (!checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+                textBox3.PasswordChar = '\0';
+            }
         }
     }
 }
