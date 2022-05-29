@@ -56,5 +56,17 @@ namespace Daraz_V_Convert.Forms
             this.Hide();
             v.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (Sign_In.seller.Products.Count > 0)
+            {
+                int rowindex = ProductGrid.CurrentCell.RowIndex;
+                Sign_In.seller.delete_product(rowindex);
+                //store all data
+                //save file
+                dataBind();
+            }
+        }
     }
 }

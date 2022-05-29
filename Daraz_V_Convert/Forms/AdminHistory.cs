@@ -24,5 +24,12 @@ namespace Daraz_V_Convert.Forms
                 textBox2.AppendText(AdminDL.Admin.History[i]+Environment.NewLine);
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMenu a = new AdminMenu();
+            a.Show();
+        }
     }
 }

@@ -7,29 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Daraz_V_Convert.DL;
+
 namespace Daraz_V_Convert.Forms
 {
-    public partial class AdminChangePassword : Form
+    public partial class UserChangepassword : Form
     {
-        public AdminChangePassword()
+        public UserChangepassword()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminChangePassword_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int chk = AdminDL.change_password(textBox1.Text, textBox2.Text, textBox3.Text);
+            int chk = Sign_In.user.change_password(textBox1.Text, textBox2.Text, textBox3.Text);
             if (chk == 1)
             {
                 MessageBox.Show("Wrong Password.");
@@ -43,8 +33,6 @@ namespace Daraz_V_Convert.Forms
             {
                 MessageBox.Show("Password has been changed.");
                 this.Hide();
-                AdminMenu a = new AdminMenu();
-                a.Show();
             }
             else if (chk == 4)
             {
@@ -53,18 +41,6 @@ namespace Daraz_V_Convert.Forms
             textBox2.Clear();
             textBox3.Clear();
             textBox1.Focus();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminMenu m = new AdminMenu();
-            m.Show();
         }
     }
 }

@@ -43,6 +43,8 @@ namespace Daraz_V_Convert.Forms
             {
                 MessageBox.Show("Password has been changed.");
                 this.Hide();
+                SellerMenu n = new SellerMenu();
+                n.Show();
             }
             else if (chk == 4)
             {
@@ -56,6 +58,13 @@ namespace Daraz_V_Convert.Forms
         private void SellerChangePassword_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellerMenu n = new SellerMenu();
+            n.Show();
         }
     }
 }

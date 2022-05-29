@@ -37,5 +37,12 @@ namespace Daraz_V_Convert.Forms
             SellerGV d = new SellerGV();
             d.Show();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellerGV d = new SellerGV();
+            d.Show();
+        }
     }
 }

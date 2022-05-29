@@ -34,5 +34,10 @@ namespace Daraz_V_Convert.Forms
             //save file
             this.Hide();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

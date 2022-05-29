@@ -28,6 +28,12 @@ namespace Daraz_V_Convert.BL
             return buy_product;
         }
         public User() { }
+        public User(string name,string password)
+        {
+            this.name = name;
+            this.password = password;
+        }   
+        
         public User(string names, string pass, string em,string pn,string ph)
         {
             name = names;
@@ -35,6 +41,32 @@ namespace Daraz_V_Convert.BL
             email=em;
             pin=pn;
             phone=ph;
+        }
+        public int change_password(string pass, string pass1, string pass2)
+        {
+            if (pass == this.Password)
+            {
+                if (pass1 == pass)
+                {
+                    return 2;
+                }
+                else
+                {
+                    if (pass1 == pass2)
+                    {
+                        this.Password = pass1;
+                        return 3;
+                    }
+                    else
+                    {
+                        return 4;
+                    }
+                }
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

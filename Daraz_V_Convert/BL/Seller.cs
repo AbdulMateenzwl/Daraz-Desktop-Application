@@ -83,5 +83,9 @@ namespace Daraz_V_Convert.BL
                 }
             }
         }
+        public void delete_product(int index)
+        {
+            product.RemoveAt(index);
+        }
     }
 }

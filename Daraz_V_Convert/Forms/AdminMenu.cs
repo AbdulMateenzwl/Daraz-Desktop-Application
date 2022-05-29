@@ -24,8 +24,9 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminChangePassword a = new AdminChangePassword();
-            a.ShowDialog();
+            a.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -37,8 +38,36 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminHistory h = new AdminHistory();
-            h.ShowDialog();
+            h.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sign_In a = new Sign_In();
+            a.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,6 +46,17 @@ namespace Daraz_V_Convert.DL
         {
             seller.RemoveAt(index);
         }
+        public static List<Product> get_products(string name)
+        {
+            for (int i = 0; i < seller.Count; i++)
+            {
+                if (name == seller[i].Name)
+                {
+                    return seller[i].Products;
+                }
+            }
+            return null;
+        }
         /*public static void load_data()
         {
             string path = "seller.txt";

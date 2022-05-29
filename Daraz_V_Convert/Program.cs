@@ -16,9 +16,11 @@ namespace Daraz_V_Convert
         {
             Seller s = new Seller("2", "2", "2", "2");
             SellerDL.add_list(s);
+            User u = new User("3", "3");
+            UserDL.add_list(u);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SellerGV());
+            Application.Run(new AdminMenu());
         }
     }
 }

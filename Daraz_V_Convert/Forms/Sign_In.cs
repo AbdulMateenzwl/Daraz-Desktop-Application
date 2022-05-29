@@ -13,7 +13,7 @@ namespace Daraz_V_Convert.Forms
 {
     public partial class Sign_In : Form
     {
-        public static User u=new User();
+        public static User user=new User();
         public static Seller seller = new Seller();
         public Sign_In()
         {
@@ -29,7 +29,7 @@ namespace Daraz_V_Convert.Forms
             string pass = textBox2.Text;
             Admin chk = AdminDL.get_admin(name,pass);
             seller = SellerDL.get_seller(name, pass);
-            u = UserDL.get_user(name, pass);
+            user = UserDL.get_user(name, pass);
             if (chk != null)
             {
                 AdminMenu a = new AdminMenu();
@@ -42,9 +42,11 @@ namespace Daraz_V_Convert.Forms
                 this.Hide();
                 d.Show();
             }
-            else if(u!=null)
+            else if(user!=null)
             {
-
+                UserMenu u = new UserMenu();
+                this.Hide();
+                u.Show();
             }
             else
             {

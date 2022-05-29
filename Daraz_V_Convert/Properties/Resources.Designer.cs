@@ -63,6 +63,16 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _618316_arrow_exit_logout_sign_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("618316_arrow_exit_logout_sign out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagews {
             get {
                 object obj = ResourceManager.GetObject("imagews", resourceCulture);
@@ -213,9 +223,79 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_376 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-376", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_www3733 {
             get {
                 object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-www3733", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unti2w2tled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Unti2w2tled-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unti2w2tled_11 {
+            get {
+                object obj = ResourceManager.GetObject("Unti2w2tled-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unti2w2tled_12 {
+            get {
+                object obj = ResourceManager.GetObject("Unti2w2tled-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_3 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitlewd_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitlewd-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

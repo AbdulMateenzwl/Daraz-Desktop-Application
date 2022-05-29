@@ -18,8 +18,9 @@ namespace Daraz_V_Convert.Forms
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SellerChangePassword s = new SellerChangePassword();
-            s.ShowDialog();
+            s.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -27,6 +28,13 @@ namespace Daraz_V_Convert.Forms
             SellerGV g = new SellerGV();
             this.Hide();
             g.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sign_In a = new Sign_In();
+            a.Show();
         }
     }
 }
