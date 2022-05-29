@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Daraz_V_Convert.BL;
 using System.IO;
+using Daraz_V_Convert.Forms;
 namespace Daraz_V_Convert.DL
 {
     class SellerDL
     {
         static string path = "seller.txt";
         private static List<Seller> seller = new List<Seller>();
+        public static List<Seller> Seller { get { return seller; } }
         public static void add_list(Seller input)
         {
             seller.Add(input);
@@ -29,6 +31,20 @@ namespace Daraz_V_Convert.DL
                 }
             }
             return null;
+        }
+        public static void replace(Seller pre,Seller nw)
+        {
+            for (int i = 0; i < seller.Count; i++)
+            {
+                if (pre.Name == Seller[i].Name && pre.Buisness == Seller[i].Buisness && pre.PhoneNum == Seller[i].PhoneNum && pre.Password == Seller[i].Password)
+                {
+                    Seller[i]= nw;
+                }
+            }
+        }
+        public static void delete(int index)
+        {
+            seller.RemoveAt(index);
         }
         /*public static void load_data()
         {

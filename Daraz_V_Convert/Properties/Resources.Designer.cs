@@ -63,6 +63,56 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagews {
+            get {
+                object obj = ResourceManager.GetObject("imagews", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_371 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_372 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-372", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_373 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-373", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_3733 {
             get {
                 object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-3733", resourceCulture);
@@ -96,6 +146,76 @@ namespace Daraz_V_Convert.Properties {
         internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37333 {
             get {
                 object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37333", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37334 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37334", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37335 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37335", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37336 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37336", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_37337 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-37337", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_374 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-374", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_375 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-375", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_www3733 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-www3733", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

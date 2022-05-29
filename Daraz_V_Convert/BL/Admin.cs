@@ -10,6 +10,12 @@ namespace Daraz_V_Convert.BL
     {
         private string username="1";
         private string password="1";
+        private List<string> history = new List<string>();
+        public List<string> History { get { return history; } }
+        public void add_history(string input)
+        {
+            history.Add(input);
+        }
         public Admin() { }
         public Admin(string username,string password)
         {

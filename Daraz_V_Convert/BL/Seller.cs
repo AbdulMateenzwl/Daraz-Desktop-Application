@@ -17,6 +17,7 @@ namespace Daraz_V_Convert.BL
         public string PhoneNum{get { return phone_num; } set { phone_num = value; } }
         public string Buisness{get { return buisness; } set { buisness = value; } }
         public string Password{get { return password; } set { password = value; } }
+        public List<Product> Products { get { return product; } }
         public Seller() { }
         public Seller(string names,string ph,string buiss,string pass)
         {
@@ -38,12 +39,49 @@ namespace Daraz_V_Convert.BL
         {
             for (int i = 0; i < product.Count; i++)
             {
-                if (name == product[i].name)
+                if (name == product[i].Name)
                 {
                     return product[i];
                 }
             }
             return null;
+        }
+        public  int change_password(string pass, string pass1, string pass2)
+        {
+            if (pass == this.Password)
+            {
+                if (pass1 == pass)
+                {
+                    return 2;
+                }
+                else
+                {
+                    if (pass1 == pass2)
+                    {
+                        this.Password = pass1;
+                        return 3;
+                    }
+                    else
+                    {
+                        return 4;
+                    }
+                }
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public void replace_product(Product pre,Product nw)
+        {
+            for (int i = 0; i < product.Count; i++)
+            {
+                if(product[i].Name==pre.Name && product[i].Prices==pre.Prices && product[i].Quantity==pre.Quantity)
+                {
+                    product[i] = nw;
+                    break;
+                }
+            }
         }
     }
 }

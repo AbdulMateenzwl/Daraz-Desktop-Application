@@ -9,7 +9,7 @@ namespace Daraz_V_Convert.DL
     internal class AdminDL
     {
         private static Admin admin = new Admin();
-        public Admin Admin { get { return admin; } set { admin = value;} }
+        public static Admin Admin { get { return admin; } set { admin = value;} }
         public static Admin get_admin(string name, string pass)
         {
             if (name == admin.Username && admin.Password == pass)

@@ -27,5 +27,18 @@ namespace Daraz_V_Convert.Forms
             AdminChangePassword a = new AdminChangePassword();
             a.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AdminGV a = new AdminGV();
+            a.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AdminHistory h = new AdminHistory();
+            h.ShowDialog();
+        }
     }
 }

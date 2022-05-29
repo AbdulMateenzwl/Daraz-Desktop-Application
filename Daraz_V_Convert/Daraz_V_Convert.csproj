@@ -58,17 +58,65 @@
     <Compile Include="Forms\AdminChangePassword.Designer.cs">
       <DependentUpon>AdminChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminGV.Designer.cs">
+      <DependentUpon>AdminGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminHistory.Designer.cs">
+      <DependentUpon>AdminHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSeller.Designer.cs">
+      <DependentUpon>EditSeller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Main_Menu.Designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerAdd.Designer.cs">
+      <DependentUpon>SellerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerChangePassword.Designer.cs">
+      <DependentUpon>SellerChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellerGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellerGV.Designer.cs">
+      <DependentUpon>SellerGV.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SellerMenu.cs">
       <SubType>Form</SubType>
@@ -99,11 +147,35 @@
     <EmbeddedResource Include="Forms\AdminChangePassword.resx">
       <DependentUpon>AdminChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminGV.resx">
+      <DependentUpon>AdminGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminHistory.resx">
+      <DependentUpon>AdminHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSeller.resx">
+      <DependentUpon>EditSeller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerAdd.resx">
+      <DependentUpon>SellerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerChangePassword.resx">
+      <DependentUpon>SellerChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellerGV.resx">
+      <DependentUpon>SellerGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellerMenu.resx">
       <DependentUpon>SellerMenu.cs</DependentUpon>
@@ -127,6 +199,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37335.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37336.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-37337.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-www3733.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-371.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-372.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-373.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-374.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-375.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

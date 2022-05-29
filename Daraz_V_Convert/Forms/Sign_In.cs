@@ -14,7 +14,7 @@ namespace Daraz_V_Convert.Forms
     public partial class Sign_In : Form
     {
         public static User u=new User();
-        public static Seller s = new Seller();
+        public static Seller seller = new Seller();
         public Sign_In()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Daraz_V_Convert.Forms
             string name = textBox1.Text;
             string pass = textBox2.Text;
             Admin chk = AdminDL.get_admin(name,pass);
-            s = SellerDL.get_seller(name, pass);
+            seller = SellerDL.get_seller(name, pass);
             u = UserDL.get_user(name, pass);
             if (chk != null)
             {
@@ -36,7 +36,7 @@ namespace Daraz_V_Convert.Forms
                 this.Hide();
                 a.Show();
             }
-            else if (s != null)
+            else if (seller != null)
             {
                 SellerMenu d = new SellerMenu();
                 this.Hide();

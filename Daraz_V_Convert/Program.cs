@@ -12,11 +12,13 @@ namespace Daraz_V_Convert
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Seller s = new Seller("2", "2", "2", "2");
+            SellerDL.add_list(s);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SellerMenu());
+            Application.Run(new SellerGV());
         }
     }
 }
