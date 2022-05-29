@@ -57,9 +57,9 @@ namespace Daraz_V_Convert.Forms
             if(SellerDL.Seller.Count>0)
             {
                 int rowindex = sellerGrid.CurrentCell.RowIndex;
+                AdminDL.Admin.add_history("You deleted " + SellerDL.Seller[rowindex].Name+" .");
                 SellerDL.delete(rowindex);
                 //store all data
-                AdminDL.Admin.add_history("You deleted " + SellerDL.Seller[rowindex]);
                 //save file
                 dataBind();
             }

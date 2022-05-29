@@ -48,5 +48,17 @@ namespace Daraz_V_Convert.Forms
             textBox4.Text = pre.Password;
             textBox1.Focus();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminGV a = new AdminGV();
+            a.Show();
+        }
     }
 }
