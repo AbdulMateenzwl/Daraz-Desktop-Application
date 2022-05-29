@@ -293,6 +293,16 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Unti2w2tled_13 {
+            get {
+                object obj = ResourceManager.GetObject("Unti2w2tled-13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled_1 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
@@ -316,6 +326,16 @@ namespace Daraz_V_Convert.Properties {
         internal static System.Drawing.Bitmap Untitlewd_1 {
             get {
                 object obj = ResourceManager.GetObject("Untitlewd-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitwdqwdqwdled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitwdqwdqwdled-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

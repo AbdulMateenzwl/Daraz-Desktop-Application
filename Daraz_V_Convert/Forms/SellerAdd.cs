@@ -22,7 +22,14 @@ namespace Daraz_V_Convert.Forms
 
         private void SellerAdd_Load(object sender, EventArgs e)
         {
-            
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+            }
+            else if (!checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -38,6 +45,18 @@ namespace Daraz_V_Convert.Forms
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+            }
+            else if (!checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+            }
         }
     }
 }
