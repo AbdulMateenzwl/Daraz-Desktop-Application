@@ -175,6 +175,7 @@
             this.label5.Size = new System.Drawing.Size(312, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Do not have a account Sign Up Instead . . .";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // pictureBox2
             // 

@@ -83,5 +83,12 @@ namespace Daraz_V_Convert.Forms
                 textBox1.Focus();
             }
         }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+            SignUp a = new SignUp();
+            this.Hide();
+            a.Show();
+        }
     }
 }
