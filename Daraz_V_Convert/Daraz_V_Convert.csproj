@@ -124,6 +124,12 @@
     <Compile Include="Forms\SellerMenu.Designer.cs">
       <DependentUpon>SellerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sign_In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellerMenu.resx">
       <DependentUpon>SellerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -325,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-379.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-3710.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

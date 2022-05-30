@@ -54,7 +54,6 @@ namespace Daraz_V_Convert.Forms
                     //store all data
                     //save file
                     MessageBox.Show("Product has been added to the cart...");
-                    //dataBind();
                     dataGrid.Refresh();
                 }
                 else

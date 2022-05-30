@@ -69,6 +69,7 @@ namespace Daraz_V_Convert.BL
                 return 1;
             }
         }
+        
         public void add_product(string name,int index)
         {
             for (int i = 0; i < SellerDL.Seller.Count; i++)

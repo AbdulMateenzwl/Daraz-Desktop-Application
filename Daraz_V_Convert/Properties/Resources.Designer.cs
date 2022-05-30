@@ -123,6 +123,16 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_3710 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-3710", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_372 {
             get {
                 object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-372", resourceCulture);

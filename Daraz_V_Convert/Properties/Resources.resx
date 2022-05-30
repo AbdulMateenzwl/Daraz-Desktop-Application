@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Unti2w2tled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unti2w2tled-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-373" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-373.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,9 +138,6 @@
   </data>
   <data name="618316_arrow_exit_logout_sign out_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\618316_arrow_exit_logout_sign out_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small-button-clip-art-clkerm-vector-clip-art-37" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-37336" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37336.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,17 +157,17 @@
   <data name="Untitwdqwdqwdled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitwdqwdqwdled-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="small-button-clip-art-clkerm-vector-clip-www3733" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-www3733.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Unti2w2tled-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unti2w2tled-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="small-button-clip-art-clkerm-vector-clip-art-37333" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small-button-clip-art-clkerm-vector-clip-art-37337" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37337.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-372" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-372.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small-button-clip-art-clkerm-vector-clip-art-379" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-379.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-375" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-375.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +175,8 @@
   <data name="small-button-clip-art-clkerm-vector-clip-art-376" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-376.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitlewd-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitlewd-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small-button-clip-art-clkerm-vector-clip-art-37337" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37337.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small-button-clip-art-clkerm-vector-clip-art-37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Unti2w2tled-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unti2w2tled-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,19 +193,25 @@
   <data name="small-button-clip-art-clkerm-vector-clip-art-37332" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37332.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Unti2w2tled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unti2w2tled-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small-button-clip-art-clkerm-vector-clip-www3733" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-www3733.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8664903_eye_slash_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8664903_eye_slash_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small-button-clip-art-clkerm-vector-clip-art-37333" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-37335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-37335.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="8664903_eye_slash_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8664903_eye_slash_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitlewd-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitlewd-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="small-button-clip-art-clkerm-vector-clip-art-374" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-374.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="small-button-clip-art-clkerm-vector-clip-art-379" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-379.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small-button-clip-art-clkerm-vector-clip-art-3710" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-button-clip-art-clkerm-vector-clip-art-3710.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
