@@ -20,7 +20,7 @@ namespace Daraz_V_Convert
             UserDL.add_list(u);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Menu());
+            Application.Run(new Sign_In());
         }
     }
 }

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Daraz_V_Convert.DL;
 namespace Daraz_V_Convert.BL
 {
     public class User
     {
         private string name;
         private string password;
-        private string email;
+        private string email="";
         private string pin;
         private string phone;
         private List<Product> buy_product = new List<Product>();
@@ -19,6 +19,7 @@ namespace Daraz_V_Convert.BL
         public string Email { get { return email; } set { email = value; } }
         public string Pin { get { return pin; } set { pin = value; } }
         public string Phone { get { return phone; } set { phone = value; } }
+        public List<Product> Product { get { return buy_product; } }
         public void add_product_list(Product input)
         {
             buy_product.Add(input);
@@ -67,6 +68,21 @@ namespace Daraz_V_Convert.BL
             {
                 return 1;
             }
+        }
+        public void add_product(string name,int index)
+        {
+            for (int i = 0; i < SellerDL.Seller.Count; i++)
+            {
+                if (SellerDL.Seller[i].Name==name)
+                {
+                    buy_product.Add(SellerDL.Seller[i].Products[index]);
+                    break;
+                }
+            }
+        }
+        public void clear_buyproducts()
+        {
+            buy_product.Clear();
         }
     }
 }

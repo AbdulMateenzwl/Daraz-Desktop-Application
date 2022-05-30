@@ -87,5 +87,20 @@ namespace Daraz_V_Convert.BL
         {
             product.RemoveAt(index);
         }
+        public bool decrement(Product a)
+        {
+            for (int i = 0; i < product.Count; i++)
+            {
+                if (product[i]==a)
+                {
+                    if(a.Quantity>=1)
+                    {
+                        a.Quantity--;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
 }

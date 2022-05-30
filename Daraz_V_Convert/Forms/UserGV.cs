@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Daraz_V_Convert.BL;
 using Daraz_V_Convert.DL;
-using Daraz_V_Convert.BL;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace Daraz_V_Convert.Forms
 {
     public partial class UserGV : Form
     {
-        List<string> list = new List<string>();
+        private string seller_name;
+
         public UserGV()
         {
             InitializeComponent();
@@ -21,8 +17,9 @@ namespace Daraz_V_Convert.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<Product> p = SellerDL.get_products(comboBox1.Text);
-            if(p != null)
+            seller_name = comboBox1.Text;
+            List<Product> p = SellerDL.get_products(seller_name);
+            if (p != null)
             {
                 dataBind(p);
             }
@@ -32,6 +29,7 @@ namespace Daraz_V_Convert.Forms
                 dataGrid.Refresh();
             }
         }
+
         public void dataBind(List<Product> p)
         {
             dataGrid.DataSource = null;
@@ -41,11 +39,36 @@ namespace Daraz_V_Convert.Forms
 
         private void UserGV_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < SellerDL.Seller.Count; i++)
+            comboBox1.DataSource = SellerDL.Seller;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            int rowindex = dataGrid.CurrentCell.RowIndex;
+            if (rowindex >= 0)
             {
-                list.Add(SellerDL.Seller[i].Name);
+                Seller s = SellerDL.get_seller(seller_name);
+                if (s.decrement(s.Products[rowindex])) 
+                {
+                    Sign_In.user.add_product(seller_name, rowindex);
+                    //store all data
+                    //save file
+                    MessageBox.Show("Product has been added to the cart...");
+                    //dataBind();
+                    dataGrid.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Product is out of stock...");
+                }
             }
-            comboBox1.DataSource=list;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserMenu a = new UserMenu();
+            a.Show();
         }
     }
 }

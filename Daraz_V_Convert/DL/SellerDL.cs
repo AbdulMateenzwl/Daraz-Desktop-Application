@@ -32,6 +32,17 @@ namespace Daraz_V_Convert.DL
             }
             return null;
         }
+        public static Seller get_seller(string seller_name)
+        {
+            for (int i = 0; i < seller.Count; i++)
+            {
+                if (seller_name == seller[i].Name)
+                {
+                    return seller[i];
+                }
+            }
+            return null;
+        }
         public static void replace(Seller pre,Seller nw)
         {
             for (int i = 0; i < seller.Count; i++)

@@ -130,6 +130,12 @@
     <Compile Include="Forms\Sign_In.Designer.cs">
       <DependentUpon>Sign_In.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserCartGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserCartGV.Designer.cs">
+      <DependentUpon>UserCartGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserChangepassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="Forms\UserGV.Designer.cs">
       <DependentUpon>UserGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Userinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Userinfo.Designer.cs">
+      <DependentUpon>Userinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserMenu.cs">
       <SubType>Form</SubType>
@@ -201,11 +213,17 @@
     <EmbeddedResource Include="Forms\Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserCartGV.resx">
+      <DependentUpon>UserCartGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserChangepassword.resx">
       <DependentUpon>UserChangepassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserGV.resx">
       <DependentUpon>UserGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Userinfo.resx">
+      <DependentUpon>Userinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserMenu.resx">
       <DependentUpon>UserMenu.cs</DependentUpon>
@@ -298,6 +316,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Unti2w2tled-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-377.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-378.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-379.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

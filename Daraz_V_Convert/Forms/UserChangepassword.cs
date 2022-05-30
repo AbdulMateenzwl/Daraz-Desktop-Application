@@ -42,5 +42,10 @@ namespace Daraz_V_Convert.Forms
             textBox3.Clear();
             textBox1.Focus();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

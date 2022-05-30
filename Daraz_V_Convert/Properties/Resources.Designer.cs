@@ -253,6 +253,36 @@ namespace Daraz_V_Convert.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_377 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-377", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_378 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_art_379 {
+            get {
+                object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-art-379", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_button_clip_art_clkerm_vector_clip_www3733 {
             get {
                 object obj = ResourceManager.GetObject("small-button-clip-art-clkerm-vector-clip-www3733", resourceCulture);
