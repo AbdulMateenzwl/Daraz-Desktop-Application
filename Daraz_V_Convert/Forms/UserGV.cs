@@ -17,7 +17,7 @@ namespace Daraz_V_Convert.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            seller_name = comboBox1.Text;
+            seller_name = cmboxseller.Text;
             List<Product> p = SellerDL.get_products(seller_name);
             if (p != null)
             {
@@ -39,7 +39,7 @@ namespace Daraz_V_Convert.Forms
 
         private void UserGV_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = SellerDL.Seller;
+            cmboxseller.DataSource = SellerDL.Seller;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

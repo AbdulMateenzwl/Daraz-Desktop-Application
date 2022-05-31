@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_In));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblname = new System.Windows.Forms.Label();
+            this.lblpass = new System.Windows.Forms.Label();
+            this.txtboxname = new System.Windows.Forms.TextBox();
+            this.picSignIn = new System.Windows.Forms.PictureBox();
+            this.txtboxpass = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSignup = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSignIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +57,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 7, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblname, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblpass, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxname, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.picSignIn, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxpass, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 7, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lblSignup, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -82,72 +82,72 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(859, 527);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // label2
+            // lblname
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(183, 218);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblname.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblname.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblname, 2);
+            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.ForeColor = System.Drawing.Color.Black;
+            this.lblname.Location = new System.Drawing.Point(183, 218);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(154, 31);
+            this.lblname.TabIndex = 1;
+            this.lblname.Text = "Username :";
+            this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblpass
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(188, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblpass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblpass.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblpass, 2);
+            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.Color.Black;
+            this.lblpass.Location = new System.Drawing.Point(188, 270);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(149, 31);
+            this.lblpass.TabIndex = 2;
+            this.lblpass.Text = "Password :";
+            this.lblpass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtboxname
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 3);
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(343, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 30);
-            this.textBox1.TabIndex = 3;
+            this.txtboxname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxname, 3);
+            this.txtboxname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxname.Location = new System.Drawing.Point(343, 219);
+            this.txtboxname.Name = "txtboxname";
+            this.txtboxname.Size = new System.Drawing.Size(249, 30);
+            this.txtboxname.TabIndex = 3;
             // 
-            // pictureBox1
+            // picSignIn
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(598, 367);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(164, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.tableLayoutPanel1.SetColumnSpan(this.picSignIn, 2);
+            this.picSignIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picSignIn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picSignIn.ErrorImage")));
+            this.picSignIn.Image = ((System.Drawing.Image)(resources.GetObject("picSignIn.Image")));
+            this.picSignIn.InitialImage = ((System.Drawing.Image)(resources.GetObject("picSignIn.InitialImage")));
+            this.picSignIn.Location = new System.Drawing.Point(598, 367);
+            this.picSignIn.Name = "picSignIn";
+            this.tableLayoutPanel1.SetRowSpan(this.picSignIn, 2);
+            this.picSignIn.Size = new System.Drawing.Size(164, 98);
+            this.picSignIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSignIn.TabIndex = 5;
+            this.picSignIn.TabStop = false;
+            this.picSignIn.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // textBox2
+            // txtboxpass
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 3);
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(343, 271);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(249, 30);
-            this.textBox2.TabIndex = 6;
+            this.txtboxpass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxpass, 3);
+            this.txtboxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxpass.Location = new System.Drawing.Point(343, 271);
+            this.txtboxpass.Name = "txtboxpass";
+            this.txtboxpass.PasswordChar = '*';
+            this.txtboxpass.Size = new System.Drawing.Size(249, 30);
+            this.txtboxpass.TabIndex = 6;
             // 
             // checkBox1
             // 
@@ -163,19 +163,19 @@
             this.checkBox1.TabIndex = 7;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lblSignup
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label5, 5);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(3, 448);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Do not have a account Sign Up Instead . . .";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            this.lblSignup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblSignup.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblSignup, 5);
+            this.lblSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignup.ForeColor = System.Drawing.Color.Blue;
+            this.lblSignup.Location = new System.Drawing.Point(3, 448);
+            this.lblSignup.Name = "lblSignup";
+            this.lblSignup.Size = new System.Drawing.Size(312, 20);
+            this.lblSignup.TabIndex = 9;
+            this.lblSignup.Text = "Do not have a account Sign Up Instead . . .";
+            this.lblSignup.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // pictureBox2
             // 
@@ -205,7 +205,7 @@
             this.Load += new System.EventHandler(this.Sign_In_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSignIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -214,13 +214,13 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblpass;
+        private System.Windows.Forms.TextBox txtboxname;
+        private System.Windows.Forms.PictureBox picSignIn;
+        private System.Windows.Forms.TextBox txtboxpass;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

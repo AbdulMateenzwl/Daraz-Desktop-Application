@@ -22,15 +22,15 @@ namespace Daraz_V_Convert.Forms
 
         private void EditProduct_Load(object sender, EventArgs e)
         {
-            textBox1.Text= pre.Name;
-            numericUpDown1.Value = pre.Prices;
-            numericUpDown2.Value = pre.Quantity;
-            textBox1.Focus();
+            txtboxname.Text= pre.Name;
+            numprice.Value = pre.Prices;
+            numquantity.Value = pre.Quantity;
+            txtboxname.Focus();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Product nw = new Product(textBox1.Text, (int)numericUpDown1.Value, (int)numericUpDown2.Value);
+            Product nw = new Product(txtboxname.Text, (int)numprice.Value, (int)numquantity.Value);
             Sign_In.seller.replace_product(pre, nw);
             //save all to file
             //save

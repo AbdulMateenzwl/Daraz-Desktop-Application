@@ -32,18 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtboxname = new System.Windows.Forms.TextBox();
+            this.numprice = new System.Windows.Forms.NumericUpDown();
+            this.numquantity = new System.Windows.Forms.NumericUpDown();
+            this.picAddProduct = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numprice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numquantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,12 +62,12 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxname, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.numprice, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.numquantity, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.picAddProduct, 7, 7);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.picExit, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -124,57 +124,57 @@
             this.label3.Text = "Quantity :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtboxname
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 3);
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(323, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 30);
-            this.textBox1.TabIndex = 2;
+            this.txtboxname.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxname, 3);
+            this.txtboxname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxname.Location = new System.Drawing.Point(323, 142);
+            this.txtboxname.Name = "txtboxname";
+            this.txtboxname.Size = new System.Drawing.Size(234, 30);
+            this.txtboxname.TabIndex = 2;
             // 
-            // numericUpDown1
+            // numprice
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown1, 3);
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(323, 183);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.tableLayoutPanel1.SetColumnSpan(this.numprice, 3);
+            this.numprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numprice.Location = new System.Drawing.Point(323, 183);
+            this.numprice.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(234, 30);
-            this.numericUpDown1.TabIndex = 3;
+            this.numprice.Name = "numprice";
+            this.numprice.Size = new System.Drawing.Size(234, 30);
+            this.numprice.TabIndex = 3;
             // 
-            // numericUpDown2
+            // numquantity
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown2, 3);
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(323, 228);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.tableLayoutPanel1.SetColumnSpan(this.numquantity, 3);
+            this.numquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numquantity.Location = new System.Drawing.Point(323, 228);
+            this.numquantity.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(234, 30);
-            this.numericUpDown2.TabIndex = 3;
+            this.numquantity.Name = "numquantity";
+            this.numquantity.Size = new System.Drawing.Size(234, 30);
+            this.numquantity.TabIndex = 3;
             // 
-            // pictureBox1
+            // picAddProduct
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_374;
-            this.pictureBox1.Location = new System.Drawing.Point(563, 318);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(154, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.picAddProduct, 2);
+            this.picAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picAddProduct.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_374;
+            this.picAddProduct.Location = new System.Drawing.Point(563, 318);
+            this.picAddProduct.Name = "picAddProduct";
+            this.tableLayoutPanel1.SetRowSpan(this.picAddProduct, 2);
+            this.picAddProduct.Size = new System.Drawing.Size(154, 84);
+            this.picAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAddProduct.TabIndex = 4;
+            this.picAddProduct.TabStop = false;
+            this.picAddProduct.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -188,17 +188,17 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox5
+            // picExit
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox5.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 363);
-            this.pictureBox5.Name = "pictureBox5";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox5, 2);
-            this.pictureBox5.Size = new System.Drawing.Size(74, 84);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.picExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.picExit.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
+            this.picExit.Location = new System.Drawing.Point(3, 363);
+            this.picExit.Name = "picExit";
+            this.tableLayoutPanel1.SetRowSpan(this.picExit, 2);
+            this.picExit.Size = new System.Drawing.Size(74, 84);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExit.TabIndex = 13;
+            this.picExit.TabStop = false;
             // 
             // ProductAdd
             // 
@@ -211,11 +211,11 @@
             this.Text = "ProductAdd";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numprice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numquantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,11 +226,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtboxname;
+        private System.Windows.Forms.NumericUpDown numprice;
+        private System.Windows.Forms.NumericUpDown numquantity;
+        private System.Windows.Forms.PictureBox picAddProduct;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox picExit;
     }
 }

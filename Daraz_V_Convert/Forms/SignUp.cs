@@ -24,13 +24,13 @@ namespace Daraz_V_Convert.Forms
             UserDL.store_data();
             if (checkBox1.Checked)
             {
-                textBox2.PasswordChar = '*';
-                textBox2.PasswordChar = '*';
+                txtboxpass1.PasswordChar = '*';
+                txtboxpass1.PasswordChar = '*';
             }
             else if (!checkBox1.Checked)
             {
-                textBox2.PasswordChar = '\0';
-                textBox2.PasswordChar = '\0';
+                txtboxpass1.PasswordChar = '\0';
+                txtboxpass1.PasswordChar = '\0';
             }
         }
 
@@ -38,29 +38,29 @@ namespace Daraz_V_Convert.Forms
         {
             if (checkBox1.Checked)
             {
-                textBox2.PasswordChar = '*';
-                textBox3.PasswordChar = '*';
+                txtboxpass1.PasswordChar = '*';
+                txtboxpass2.PasswordChar = '*';
             }
             else if (!checkBox1.Checked)
             {
-                textBox2.PasswordChar = '\0';
-                textBox3.PasswordChar = '\0';
+                txtboxpass1.PasswordChar = '\0';
+                txtboxpass2.PasswordChar = '\0';
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="")
+            if(txtboxname.Text=="")
             {
                 MessageBox.Show("Please add Username...");
             }
-            else if(textBox2.Text!=textBox3.Text)
+            else if(txtboxpass1.Text!=txtboxpass2.Text)
             {
                 MessageBox.Show("Password does not match...");
             }
             else
             {
-                User u = new User(textBox1.Text, textBox2.Text);
+                User u = new User(txtboxname.Text, txtboxpass1.Text);
                 UserDL.add_list(u);
                 UserDL.store_data();
                 Sign_In.user = u;

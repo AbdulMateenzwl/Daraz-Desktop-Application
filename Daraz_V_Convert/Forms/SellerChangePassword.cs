@@ -30,11 +30,11 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int chk = Sign_In.seller.change_password(textBox1.Text, textBox2.Text, textBox3.Text);
+            int chk = Sign_In.seller.change_password(txtboxoldpass.Text, txtboxnewpass1.Text, txtboxnewpass2.Text);
             if (chk == 1)
             {
                 MessageBox.Show("Wrong Password.");
-                textBox1.Clear();
+                txtboxoldpass.Clear();
             }
             else if (chk == 2)
             {
@@ -52,22 +52,22 @@ namespace Daraz_V_Convert.Forms
             {
                 MessageBox.Show("New Passwords does not match.");
             }
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox1.Focus();
+            txtboxnewpass1.Clear();
+            txtboxnewpass2.Clear();
+            txtboxoldpass.Focus();
         }
 
         private void SellerChangePassword_Load(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
-                textBox2.PasswordChar = '*';
-                textBox3.PasswordChar = '*';
+                txtboxnewpass1.PasswordChar = '*';
+                txtboxnewpass2.PasswordChar = '*';
             }
             else if (!checkBox1.Checked)
             {
-                textBox2.PasswordChar = '\0';
-                textBox3.PasswordChar = '\0';
+                txtboxnewpass1.PasswordChar = '\0';
+                txtboxnewpass2.PasswordChar = '\0';
             }
         }
 
@@ -82,13 +82,13 @@ namespace Daraz_V_Convert.Forms
         {
             if (checkBox1.Checked)
             {
-                textBox2.PasswordChar = '*';
-                textBox3.PasswordChar = '*';
+                txtboxnewpass1.PasswordChar = '*';
+                txtboxnewpass2.PasswordChar = '*';
             }
             else if (!checkBox1.Checked)
             {
-                textBox2.PasswordChar = '\0';
-                textBox3.PasswordChar = '\0';
+                txtboxnewpass1.PasswordChar = '\0';
+                txtboxnewpass2.PasswordChar = '\0';
             }
         }
     }

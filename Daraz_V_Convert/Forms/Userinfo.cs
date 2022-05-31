@@ -34,14 +34,14 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="" || textBox2.Text=="" || textBox2.Text.Length<11)
+            if(txtboxemail.Text=="" || this.txtboxphone.Text=="" || this.txtboxphone.Text.Length<11)
             {
                 MessageBox.Show("Please Enter the correct information...");
             }
             else
             {
-                Sign_In.user.Email = textBox1.Text;
-                Sign_In.user.Phone = textBox2.Text;
+                Sign_In.user.Email = txtboxemail.Text;
+                Sign_In.user.Phone = this.txtboxphone.Text;
                 //Sign_In.user.clear_buyproducts();
                 this.Hide();
             }

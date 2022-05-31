@@ -19,11 +19,11 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int chk = Sign_In.user.change_password(textBox1.Text, textBox2.Text, textBox3.Text);
+            int chk = Sign_In.user.change_password(txtboxoldpass.Text, txtboxnewpass1.Text, txtboxnewpass2.Text);
             if (chk == 1)
             {
                 MessageBox.Show("Wrong Password.");
-                textBox1.Clear();
+                txtboxoldpass.Clear();
             }
             else if (chk == 2)
             {
@@ -39,9 +39,9 @@ namespace Daraz_V_Convert.Forms
             {
                 MessageBox.Show("New Passwords does not match.");
             }
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox1.Focus();
+            txtboxnewpass1.Clear();
+            txtboxnewpass2.Clear();
+            txtboxoldpass.Focus();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

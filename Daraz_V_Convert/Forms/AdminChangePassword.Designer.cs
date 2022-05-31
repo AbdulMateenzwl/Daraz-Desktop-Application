@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_oldpass = new System.Windows.Forms.Label();
             this.txtboxoldpass = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtboxnewpass1 = new System.Windows.Forms.TextBox();
+            this.txtboxnewpass2 = new System.Windows.Forms.TextBox();
+            this.lblnewpass1 = new System.Windows.Forms.Label();
+            this.lblnewpass2 = new System.Windows.Forms.Label();
+            this.pic_changepass = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
+            this.pass_chk = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_changepass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,16 +58,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_oldpass, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtboxoldpass, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxnewpass1, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxnewpass2, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lblnewpass1, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblnewpass2, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.pic_changepass, 7, 7);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.picExit, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.pass_chk, 7, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -86,19 +86,19 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // label2
+            // lbl_oldpass
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(172, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Old Password :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbl_oldpass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_oldpass.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lbl_oldpass, 2);
+            this.lbl_oldpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_oldpass.Location = new System.Drawing.Point(172, 145);
+            this.lbl_oldpass.Name = "lbl_oldpass";
+            this.lbl_oldpass.Size = new System.Drawing.Size(145, 25);
+            this.lbl_oldpass.TabIndex = 3;
+            this.lbl_oldpass.Text = "Old Password :";
+            this.lbl_oldpass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_oldpass.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtboxoldpass
             // 
@@ -110,65 +110,65 @@
             this.txtboxoldpass.Size = new System.Drawing.Size(234, 30);
             this.txtboxoldpass.TabIndex = 6;
             // 
-            // textBox2
+            // txtboxnewpass1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 3);
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(323, 232);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 30);
-            this.textBox2.TabIndex = 7;
+            this.txtboxnewpass1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxnewpass1, 3);
+            this.txtboxnewpass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxnewpass1.Location = new System.Drawing.Point(323, 232);
+            this.txtboxnewpass1.Name = "txtboxnewpass1";
+            this.txtboxnewpass1.Size = new System.Drawing.Size(234, 30);
+            this.txtboxnewpass1.TabIndex = 7;
             // 
-            // textBox3
+            // txtboxnewpass2
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox3, 3);
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(323, 277);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 30);
-            this.textBox3.TabIndex = 8;
+            this.txtboxnewpass2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxnewpass2, 3);
+            this.txtboxnewpass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxnewpass2.Location = new System.Drawing.Point(323, 277);
+            this.txtboxnewpass2.Name = "txtboxnewpass2";
+            this.txtboxnewpass2.Size = new System.Drawing.Size(234, 30);
+            this.txtboxnewpass2.TabIndex = 8;
             // 
-            // label4
+            // lblnewpass1
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label4, 3);
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(116, 235);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Enter new Password :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblnewpass1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblnewpass1.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblnewpass1, 3);
+            this.lblnewpass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnewpass1.Location = new System.Drawing.Point(116, 235);
+            this.lblnewpass1.Name = "lblnewpass1";
+            this.lblnewpass1.Size = new System.Drawing.Size(201, 25);
+            this.lblnewpass1.TabIndex = 5;
+            this.lblnewpass1.Text = "Enter new Password :";
+            this.lblnewpass1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lblnewpass2
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label3, 3);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(105, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Renter new Password :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblnewpass2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblnewpass2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblnewpass2, 3);
+            this.lblnewpass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnewpass2.Location = new System.Drawing.Point(105, 280);
+            this.lblnewpass2.Name = "lblnewpass2";
+            this.lblnewpass2.Size = new System.Drawing.Size(212, 25);
+            this.lblnewpass2.TabIndex = 4;
+            this.lblnewpass2.Text = "Renter new Password :";
+            this.lblnewpass2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
+            // pic_changepass
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_3733;
-            this.pictureBox1.Location = new System.Drawing.Point(563, 318);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(154, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.pic_changepass, 2);
+            this.pic_changepass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic_changepass.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_3733;
+            this.pic_changepass.Location = new System.Drawing.Point(563, 318);
+            this.pic_changepass.Name = "pic_changepass";
+            this.tableLayoutPanel1.SetRowSpan(this.pic_changepass, 2);
+            this.pic_changepass.Size = new System.Drawing.Size(154, 84);
+            this.pic_changepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_changepass.TabIndex = 9;
+            this.pic_changepass.TabStop = false;
+            this.pic_changepass.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -183,33 +183,33 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox5
+            // picExit
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox5.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 363);
-            this.pictureBox5.Name = "pictureBox5";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox5, 2);
-            this.pictureBox5.Size = new System.Drawing.Size(74, 84);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.picExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.picExit.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
+            this.picExit.Location = new System.Drawing.Point(3, 363);
+            this.picExit.Name = "picExit";
+            this.tableLayoutPanel1.SetRowSpan(this.picExit, 2);
+            this.picExit.Size = new System.Drawing.Size(74, 84);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExit.TabIndex = 11;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // checkBox1
+            // pass_chk
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Image = global::Daraz_V_Convert.Properties.Resources._8664903_eye_slash_icon_1_;
-            this.checkBox1.Location = new System.Drawing.Point(563, 228);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 39);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.pass_chk.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pass_chk.AutoSize = true;
+            this.pass_chk.Checked = true;
+            this.pass_chk.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.pass_chk.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_chk.Image = global::Daraz_V_Convert.Properties.Resources._8664903_eye_slash_icon_1_;
+            this.pass_chk.Location = new System.Drawing.Point(563, 228);
+            this.pass_chk.Name = "pass_chk";
+            this.pass_chk.Size = new System.Drawing.Size(63, 39);
+            this.pass_chk.TabIndex = 12;
+            this.pass_chk.UseVisualStyleBackColor = true;
+            this.pass_chk.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // AdminChangePassword
             // 
@@ -223,9 +223,9 @@
             this.Load += new System.EventHandler(this.AdminChangePassword_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_changepass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,15 +233,15 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_oldpass;
+        private System.Windows.Forms.Label lblnewpass1;
+        private System.Windows.Forms.Label lblnewpass2;
         private System.Windows.Forms.TextBox txtboxoldpass;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtboxnewpass1;
+        private System.Windows.Forms.TextBox txtboxnewpass2;
+        private System.Windows.Forms.PictureBox pic_changepass;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.CheckBox pass_chk;
     }
 }

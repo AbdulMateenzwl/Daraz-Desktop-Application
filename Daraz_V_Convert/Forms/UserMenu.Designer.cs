@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picViewproducts = new System.Windows.Forms.PictureBox();
+            this.picChangepass = new System.Windows.Forms.PictureBox();
+            this.picbanner = new System.Windows.Forms.PictureBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picViewCart = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picViewproducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChangepass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picViewCart)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -57,12 +57,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.picViewproducts, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.picChangepass, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.picbanner, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.picExit, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.picViewCart, 3, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -80,59 +80,59 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // pictureBox2
+            // picViewproducts
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox2, 3);
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_376;
-            this.pictureBox2.Location = new System.Drawing.Point(83, 183);
-            this.pictureBox2.Name = "pictureBox2";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox2, 2);
-            this.pictureBox2.Size = new System.Drawing.Size(234, 84);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.picViewproducts, 3);
+            this.picViewproducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picViewproducts.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_376;
+            this.picViewproducts.Location = new System.Drawing.Point(83, 183);
+            this.picViewproducts.Name = "picViewproducts";
+            this.tableLayoutPanel1.SetRowSpan(this.picViewproducts, 2);
+            this.picViewproducts.Size = new System.Drawing.Size(234, 84);
+            this.picViewproducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picViewproducts.TabIndex = 3;
+            this.picViewproducts.TabStop = false;
+            this.picViewproducts.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // picChangepass
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 3);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_3733;
-            this.pictureBox1.Location = new System.Drawing.Point(483, 183);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(234, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.picChangepass, 3);
+            this.picChangepass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picChangepass.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_3733;
+            this.picChangepass.Location = new System.Drawing.Point(483, 183);
+            this.picChangepass.Name = "picChangepass";
+            this.tableLayoutPanel1.SetRowSpan(this.picChangepass, 2);
+            this.picChangepass.Size = new System.Drawing.Size(234, 84);
+            this.picChangepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picChangepass.TabIndex = 2;
+            this.picChangepass.TabStop = false;
+            this.picChangepass.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox4
+            // picbanner
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox4, 6);
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::Daraz_V_Convert.Properties.Resources.Unti2w2tled_1;
-            this.pictureBox4.Location = new System.Drawing.Point(163, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox4, 2);
-            this.pictureBox4.Size = new System.Drawing.Size(474, 84);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
+            this.tableLayoutPanel1.SetColumnSpan(this.picbanner, 6);
+            this.picbanner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picbanner.Image = global::Daraz_V_Convert.Properties.Resources.Unti2w2tled_1;
+            this.picbanner.Location = new System.Drawing.Point(163, 3);
+            this.picbanner.Name = "picbanner";
+            this.tableLayoutPanel1.SetRowSpan(this.picbanner, 2);
+            this.picbanner.Size = new System.Drawing.Size(474, 84);
+            this.picbanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbanner.TabIndex = 5;
+            this.picbanner.TabStop = false;
             // 
-            // pictureBox5
+            // picExit
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox5.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 363);
-            this.pictureBox5.Name = "pictureBox5";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox5, 2);
-            this.pictureBox5.Size = new System.Drawing.Size(74, 84);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.picExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.picExit.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
+            this.picExit.Location = new System.Drawing.Point(3, 363);
+            this.picExit.Name = "picExit";
+            this.tableLayoutPanel1.SetRowSpan(this.picExit, 2);
+            this.picExit.Size = new System.Drawing.Size(74, 84);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExit.TabIndex = 13;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -147,19 +147,19 @@
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox3
+            // picViewCart
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox3, 4);
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_378;
-            this.pictureBox3.Location = new System.Drawing.Point(243, 273);
-            this.pictureBox3.Name = "pictureBox3";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox3, 2);
-            this.pictureBox3.Size = new System.Drawing.Size(314, 84);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.picViewCart, 4);
+            this.picViewCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picViewCart.Image = global::Daraz_V_Convert.Properties.Resources.small_button_clip_art_clkerm_vector_clip_art_378;
+            this.picViewCart.Location = new System.Drawing.Point(243, 273);
+            this.picViewCart.Name = "picViewCart";
+            this.tableLayoutPanel1.SetRowSpan(this.picViewCart, 2);
+            this.picViewCart.Size = new System.Drawing.Size(314, 84);
+            this.picViewCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picViewCart.TabIndex = 15;
+            this.picViewCart.TabStop = false;
+            this.picViewCart.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // UserMenu
             // 
@@ -171,12 +171,12 @@
             this.Name = "UserMenu";
             this.Text = "UserMenu";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picViewproducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChangepass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picViewCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,11 +184,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox picViewproducts;
+        private System.Windows.Forms.PictureBox picChangepass;
+        private System.Windows.Forms.PictureBox picbanner;
+        private System.Windows.Forms.PictureBox picExit;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picViewCart;
     }
 }

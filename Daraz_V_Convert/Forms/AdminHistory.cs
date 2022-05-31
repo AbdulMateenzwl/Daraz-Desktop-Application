@@ -21,7 +21,7 @@ namespace Daraz_V_Convert.Forms
         {
             for (int i = 0; i < AdminDL.Admin.History.Count; i++)
             {
-                textBox2.AppendText(AdminDL.Admin.History[i]+Environment.NewLine);
+                txtboxhistory.AppendText(AdminDL.Admin.History[i]+Environment.NewLine);
             }
         }
 

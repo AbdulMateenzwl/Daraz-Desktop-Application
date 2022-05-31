@@ -22,21 +22,21 @@ namespace Daraz_V_Convert.Forms
 
         private void SellerAdd_Load(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (pass_chk.Checked)
             {
-                textBox2.PasswordChar = '*';
+                txtboxpass.PasswordChar = '*';
             }
-            else if (!checkBox1.Checked)
+            else if (!pass_chk.Checked)
             {
-                textBox2.PasswordChar = '\0';
+                txtboxpass.PasswordChar = '\0';
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Seller s = new Seller(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            Seller s = new Seller(txtboxname.Text, txtboxpass.Text, txtboxbuisness.Text, txtboxphonenum.Text);
             SellerDL.add_list(s);
-            AdminDL.Admin.add_history("You added "+textBox1.Text+" to "+textBox3.Text+" Buisness list.");
+            AdminDL.Admin.add_history("You added "+txtboxname.Text+" to "+txtboxbuisness.Text+" Buisness list.");
             SellerDL.store_data();
             //store to file
             //save file
@@ -50,13 +50,13 @@ namespace Daraz_V_Convert.Forms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (pass_chk.Checked)
             {
-                textBox2.PasswordChar = '*';
+                txtboxpass.PasswordChar = '*';
             }
-            else if (!checkBox1.Checked)
+            else if (!pass_chk.Checked)
             {
-                textBox2.PasswordChar = '\0';
+                txtboxpass.PasswordChar = '\0';
             }
         }
     }

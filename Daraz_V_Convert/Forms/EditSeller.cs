@@ -30,9 +30,9 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Seller nw = new Seller(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            Seller nw = new Seller(txtboxname.Text, txtboxpass.Text, txtboxbuisness.Text, txtboxphone.Text);
             SellerDL.replace(pre, nw);
-            AdminDL.Admin.add_history("You edited " + textBox1.Text + " .");
+            AdminDL.Admin.add_history("You edited " + txtboxname.Text + " .");
             //save all to file
             //save
             SellerDL.store_data();
@@ -44,19 +44,19 @@ namespace Daraz_V_Convert.Forms
 
         private void EditSeller_Load(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (pass_chk.Checked)
             {
-                textBox2.PasswordChar = '*';
+                txtboxpass.PasswordChar = '*';
             }
-            else if (!checkBox1.Checked)
+            else if (!pass_chk.Checked)
             {
-                textBox2.PasswordChar = '\0';
+                txtboxpass.PasswordChar = '\0';
             }
-            textBox1.Text = pre.Name;
-            textBox2.Text = pre.PhoneNum;
-            textBox3.Text = pre.Buisness;
-            textBox4.Text = pre.Password;
-            textBox1.Focus();
+            txtboxname.Text = pre.Name;
+            txtboxpass.Text = pre.PhoneNum;
+            txtboxbuisness.Text = pre.Buisness;
+            txtboxphone.Text = pre.Password;
+            txtboxname.Focus();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -73,13 +73,13 @@ namespace Daraz_V_Convert.Forms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (pass_chk.Checked)
             {
-                textBox2.PasswordChar = '*';
+                txtboxpass.PasswordChar = '*';
             }
-            else if (!checkBox1.Checked)
+            else if (!pass_chk.Checked)
             {
-                textBox2.PasswordChar = '\0';
+                txtboxpass.PasswordChar = '\0';
             }
         }
     }

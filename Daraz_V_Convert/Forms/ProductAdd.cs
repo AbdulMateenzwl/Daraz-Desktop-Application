@@ -20,8 +20,8 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int a = (int)numericUpDown1.Value;
-            Product p = new Product(textBox1.Text, (int)numericUpDown1.Value , (int)numericUpDown2.Value );
+            int a = (int)numprice.Value;
+            Product p = new Product(txtboxname.Text, (int)numprice.Value , (int)numquantity.Value );
             Sign_In.seller.add_product(p);
             SellerDL.store_data();
             this.Hide();

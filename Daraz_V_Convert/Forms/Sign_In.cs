@@ -37,11 +37,11 @@ namespace Daraz_V_Convert.Forms
         {
             if(checkBox1.Checked)
             {
-                textBox2.PasswordChar = '*';
+                txtboxpass.PasswordChar = '*';
             }
             else if(!checkBox1.Checked)
             {
-                textBox2.PasswordChar ='\0';
+                txtboxpass.PasswordChar ='\0';
             }
         }
 
@@ -52,8 +52,8 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
-            string pass = textBox2.Text;
+            string name = txtboxname.Text;
+            string pass = txtboxpass.Text;
             Admin chk = AdminDL.get_admin(name, pass);
             seller = SellerDL.get_seller(name, pass);
             user = UserDL.get_user(name, pass);
@@ -78,9 +78,9 @@ namespace Daraz_V_Convert.Forms
             else
             {
                 MessageBox.Show("There is no such User...");
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox1.Focus();
+                txtboxname.Clear();
+                txtboxpass.Clear();
+                txtboxname.Focus();
             }
         }
 

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
+            this.txtboxhistory = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +52,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.picExit, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxhistory, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,31 +75,31 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox5
+            // picExit
             // 
-            this.pictureBox5.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox5, 2);
-            this.pictureBox5.Size = new System.Drawing.Size(74, 84);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.picExit.Image = global::Daraz_V_Convert.Properties.Resources._618316_arrow_exit_logout_sign_out_icon;
+            this.picExit.Location = new System.Drawing.Point(3, 3);
+            this.picExit.Name = "picExit";
+            this.tableLayoutPanel1.SetRowSpan(this.picExit, 2);
+            this.picExit.Size = new System.Drawing.Size(74, 84);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExit.TabIndex = 7;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // textBox2
+            // txtboxhistory
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 10);
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(3, 138);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.tableLayoutPanel1.SetRowSpan(this.textBox2, 7);
-            this.textBox2.Size = new System.Drawing.Size(794, 309);
-            this.textBox2.TabIndex = 1;
+            this.txtboxhistory.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtboxhistory, 10);
+            this.txtboxhistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtboxhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxhistory.Location = new System.Drawing.Point(3, 138);
+            this.txtboxhistory.Multiline = true;
+            this.txtboxhistory.Name = "txtboxhistory";
+            this.txtboxhistory.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.txtboxhistory, 7);
+            this.txtboxhistory.Size = new System.Drawing.Size(794, 309);
+            this.txtboxhistory.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -137,7 +137,7 @@
             this.Load += new System.EventHandler(this.AdminHistory_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -147,9 +147,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtboxhistory;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox picExit;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
