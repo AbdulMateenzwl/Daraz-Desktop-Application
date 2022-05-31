@@ -243,6 +243,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\small-button-clip-art-clkerm-vector-clip-art-3733.png" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Daraz_V_Convert.BL;
 namespace Daraz_V_Convert.DL
 {
-    internal class AdminDL
+    class AdminDL
     {
         private static Admin admin = new Admin();
         public static Admin Admin { get { return admin; } set { admin = value;} }
