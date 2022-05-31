@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Daraz_V_Convert.DL;
 namespace Daraz_V_Convert.Forms
 {
     public partial class UserChangepassword : Form
@@ -32,6 +32,7 @@ namespace Daraz_V_Convert.Forms
             else if (chk == 3)
             {
                 MessageBox.Show("Password has been changed.");
+                UserDL.store_data();
                 this.Hide();
             }
             else if (chk == 4)

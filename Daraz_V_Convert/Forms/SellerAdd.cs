@@ -37,6 +37,7 @@ namespace Daraz_V_Convert.Forms
             Seller s = new Seller(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
             SellerDL.add_list(s);
             AdminDL.Admin.add_history("You added "+textBox1.Text+" to "+textBox3.Text+" Buisness list.");
+            SellerDL.store_data();
             //store to file
             //save file
             this.Hide();

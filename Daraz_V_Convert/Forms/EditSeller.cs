@@ -35,6 +35,8 @@ namespace Daraz_V_Convert.Forms
             AdminDL.Admin.add_history("You edited " + textBox1.Text + " .");
             //save all to file
             //save
+            SellerDL.store_data();
+            UserDL.store_data();
             this.Hide();
             AdminGV a = new AdminGV();
             a.Show();

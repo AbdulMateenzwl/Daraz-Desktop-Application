@@ -62,6 +62,7 @@ namespace Daraz_V_Convert.Forms
             {
                 User u = new User(textBox1.Text, textBox2.Text);
                 UserDL.add_list(u);
+                UserDL.store_data();
                 Sign_In.user = u;
                 this.Hide();
                 UserMenu m = new UserMenu();

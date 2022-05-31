@@ -38,11 +38,11 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int chk = AdminDL.change_password(textBox1.Text, textBox2.Text, textBox3.Text);
+            int chk = AdminDL.change_password(txtboxoldpass.Text, textBox2.Text, textBox3.Text);
             if (chk == 1)
             {
                 MessageBox.Show("Wrong Password.");
-                textBox1.Clear();
+                txtboxoldpass.Clear();
             }
             else if (chk == 2)
             {
@@ -63,7 +63,7 @@ namespace Daraz_V_Convert.Forms
             }
             textBox2.Clear();
             textBox3.Clear();
-            textBox1.Focus();
+            txtboxoldpass.Focus();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

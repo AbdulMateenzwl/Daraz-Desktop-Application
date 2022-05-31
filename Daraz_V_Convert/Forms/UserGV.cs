@@ -53,6 +53,8 @@ namespace Daraz_V_Convert.Forms
                     Sign_In.user.add_product(seller_name, rowindex);
                     //store all data
                     //save file
+                    SellerDL.store_data();
+                    UserDL.store_data();
                     MessageBox.Show("Product has been added to the cart...");
                     dataGrid.Refresh();
                 }

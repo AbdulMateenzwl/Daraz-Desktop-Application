@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Daraz_V_Convert.DL;
 namespace Daraz_V_Convert.Forms
 {
     public partial class SellerGV : Form
@@ -65,6 +65,7 @@ namespace Daraz_V_Convert.Forms
                 Sign_In.seller.delete_product(rowindex);
                 //store all data
                 //save file
+                SellerDL.store_data();
                 dataBind();
             }
         }

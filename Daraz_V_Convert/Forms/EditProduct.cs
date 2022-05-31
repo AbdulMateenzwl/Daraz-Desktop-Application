@@ -30,12 +30,12 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SellerDL.store_data();
-            UserDL.store_data();
             Product nw = new Product(textBox1.Text, (int)numericUpDown1.Value, (int)numericUpDown2.Value);
             Sign_In.seller.replace_product(pre, nw);
             //save all to file
             //save
+            SellerDL.store_data();
+            UserDL.store_data();
             this.Hide();
             SellerGV d = new SellerGV();
             d.Show();

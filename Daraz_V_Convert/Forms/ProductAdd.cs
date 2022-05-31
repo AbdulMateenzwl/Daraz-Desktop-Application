@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Daraz_V_Convert.BL;
+using Daraz_V_Convert.DL;
 namespace Daraz_V_Convert.Forms
 {
     public partial class ProductAdd : Form
@@ -22,6 +23,7 @@ namespace Daraz_V_Convert.Forms
             int a = (int)numericUpDown1.Value;
             Product p = new Product(textBox1.Text, (int)numericUpDown1.Value , (int)numericUpDown2.Value );
             Sign_In.seller.add_product(p);
+            SellerDL.store_data();
             this.Hide();
         }
     }
