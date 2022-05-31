@@ -20,6 +20,8 @@ namespace Daraz_V_Convert.Forms
 
         private void SignUp_Load(object sender, EventArgs e)
         {
+            SellerDL.store_data();
+            UserDL.store_data();
             if (checkBox1.Checked)
             {
                 textBox2.PasswordChar = '*';
@@ -48,7 +50,7 @@ namespace Daraz_V_Convert.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text!="")
+            if(textBox1.Text=="")
             {
                 MessageBox.Show("Please add Username...");
             }

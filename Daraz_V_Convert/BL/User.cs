@@ -85,5 +85,9 @@ namespace Daraz_V_Convert.BL
         {
             buy_product.Clear();
         }
+        public  void add_product(Product p)
+        {
+            buy_product.Add(p);
+        }
     }
 }

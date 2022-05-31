@@ -50,6 +50,7 @@ namespace Daraz_V_Convert.Forms
             }
             else if (chk == 3)
             {
+                AdminDL.store_data();
                 AdminDL.Admin.add_history("You changed password .");
                 MessageBox.Show("Password has been changed.");
                 this.Hide();

@@ -68,7 +68,27 @@ namespace Daraz_V_Convert.DL
             }
             return null;
         }
-        /*public static void load_data()
+        
+        public static void store_data()
+        {
+            StreamWriter var = new StreamWriter(path, false);
+            for (int i = 0; i < seller.Count; i++)
+            {
+                var.Write(seller[i].Name + "," + seller[i].PhoneNum + "," + seller[i].Buisness + "," + seller[i].Password + "," + seller[i].Products.Count+",");
+                
+                for (int m = 0; m < seller[i].Products.Count; m++)
+                {
+                    var.Write(seller[i].Products[m].Name + ";" + seller[i].Products[m].Prices + ";" + seller[i].Products[m].Quantity); 
+                    if(m!= seller[i].Products.Count-1)
+                    {
+                        var.Write("$");
+                    }
+                }
+                var.WriteLine("");
+            }
+            var.Close();
+        }
+        public static void loadData()
         {
             string path = "seller.txt";
             if (File.Exists(path))
@@ -77,44 +97,29 @@ namespace Daraz_V_Convert.DL
                 string record;
                 while ((record = var.ReadLine()) != null)
                 {
-                    Seller input = new Seller();
-                    input.name = parse(record, 1);
-                    input.phone_num = parse(record, 2);
-                    input.buisness = parse(record, 3);
-                    input.password = parse(record, 4);
-                    for (int i = 5; i < 100; i = i + 2)
+                    string[] splitData = record.Split(',');
+                    Seller s = new Seller();
+                    s.Name = splitData[0];
+                    s.PhoneNum = splitData[1];
+                    s.Buisness = splitData[2];
+                    s.Password = splitData[3];
+                    int count = int.Parse(splitData[4]);
+                    string list = splitData[5];
+                    string[] splitList = list.Split('$');
+                    for (int i = 0; i < count; i++)
                     {
-                        Product inp = new Product();
-                        if (parse(record, i) == "")
-                        {
-                            break;
-                        }
-                        inp.name = parse(record, i);
-                        inp.prices = int.Parse(parse(record, i + 1));
-                        input.product.Add(inp);
+                        string pline = splitList[i];
+                        string[] po = pline.Split(';');
+                        Product p = new Product();
+                        p.Name = po[0];
+                        p.Prices = int.Parse(po[1]);
+                        p.Quantity = int.Parse(po[2]);
+                        s.add_product(p);
                     }
-                    seller.Add(input);
+                    seller.Add(s);
                 }
                 var.Close();
             }
-
-        }*/
-        /*public static void store_data(List<Seller> seller)
-        {
-            StreamWriter var = new StreamWriter(path, false);
-            for (int i = 0; i < seller.Count; i++)
-            {
-                if (seller[i].name != "")
-                {
-                    var.Write(seller[i].name + "$" + seller[i].phone_num + "$" + seller[i].buisness + "$" + seller[i].password + "$");
-                }
-                for (int m = 0; m < seller[i].product.Count; m++)
-                {
-                    var.Write(seller[i].product[m].name + "$" + seller[i].product[m].prices + "$");
-                }
-                var.WriteLine("");
-            }
-            var.Close();
-        }*/
+        }
     }
 }

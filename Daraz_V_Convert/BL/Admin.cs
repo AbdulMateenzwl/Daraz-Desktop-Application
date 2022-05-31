@@ -8,8 +8,8 @@ namespace Daraz_V_Convert.BL
 {
     class Admin
     {
-        private string username="1";
-        private string password="1";
+        private string username;
+        private string password;
         private List<string> history = new List<string>();
         public List<string> History { get { return history; } }
         public void add_history(string input)

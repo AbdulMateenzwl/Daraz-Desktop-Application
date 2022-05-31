@@ -24,7 +24,7 @@ namespace Daraz_V_Convert.Forms
         public void dataBind()
         {
             dataGrid.DataSource = null;
-            dataGrid.DataSource = Sign_In.user.get_product_list();
+            dataGrid.DataSource = Sign_In.user.get_product_list().Select(c=>new {c.Name,c.Prices}).ToList();
             dataGrid.Refresh();
         }
 
@@ -40,7 +40,6 @@ namespace Daraz_V_Convert.Forms
                 else
                 {
                     MessageBox.Show("Products has been ordered...");
-                    //Sign_In.user.clear_buyproducts();
                 }
             }
             else

@@ -62,6 +62,8 @@ namespace Daraz_V_Convert.Forms
                 //store all data
                 //save file
                 dataBind();
+                SellerDL.store_data();
+                UserDL.store_data();
             }
         }
 

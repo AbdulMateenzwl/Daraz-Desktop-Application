@@ -14,10 +14,9 @@ namespace Daraz_V_Convert
     {
         static void Main()
         {
-            Seller s = new Seller("2", "2", "2", "2");
-            SellerDL.add_list(s);
-            User u = new User("3", "3");
-            UserDL.add_list(u);
+            SellerDL.loadData();
+            AdminDL.load_data();
+            UserDL.loadData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Sign_In());
