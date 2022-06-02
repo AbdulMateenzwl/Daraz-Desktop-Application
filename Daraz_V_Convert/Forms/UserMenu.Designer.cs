@@ -170,6 +170,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UserMenu";
             this.Text = "UserMenu";
+            this.Load += new System.EventHandler(this.UserMenu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picViewproducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChangepass)).EndInit();

@@ -26,5 +26,10 @@ namespace Daraz_V_Convert.Forms
             SellerDL.store_data();
             this.Hide();
         }
+
+        private void ProductAdd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

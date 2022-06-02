@@ -43,5 +43,10 @@ namespace Daraz_V_Convert.Forms
             this.Hide();
             a.Show();
         }
+
+        private void UserMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

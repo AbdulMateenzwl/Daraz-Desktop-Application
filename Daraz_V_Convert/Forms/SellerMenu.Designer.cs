@@ -154,6 +154,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SellerMenu";
             this.Text = "SellerMenu";
+            this.Load += new System.EventHandler(this.SellerMenu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProductRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChangePass)).EndInit();

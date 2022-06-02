@@ -201,6 +201,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UserChangepassword";
             this.Text = "UserChangepassword";
+            this.Load += new System.EventHandler(this.UserChangepassword_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();

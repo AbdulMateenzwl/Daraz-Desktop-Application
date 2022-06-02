@@ -209,6 +209,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductAdd";
             this.Text = "ProductAdd";
+            this.Load += new System.EventHandler(this.ProductAdd_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numprice)).EndInit();

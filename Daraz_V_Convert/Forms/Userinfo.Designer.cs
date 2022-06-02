@@ -177,6 +177,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Userinfo";
             this.Text = "Userinfo";
+            this.Load += new System.EventHandler(this.Userinfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

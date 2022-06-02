@@ -48,5 +48,10 @@ namespace Daraz_V_Convert.Forms
         {
             this.Hide();
         }
+
+        private void UserChangepassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

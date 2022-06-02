@@ -36,5 +36,10 @@ namespace Daraz_V_Convert.Forms
             Sign_In a = new Sign_In();
             a.Show();
         }
+
+        private void SellerMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
